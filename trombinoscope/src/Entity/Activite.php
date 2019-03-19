@@ -29,6 +29,11 @@ class Activite
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
+    private $color;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $typeof;
 
     public function getId()
@@ -71,4 +76,16 @@ class Activite
 
         return $this;
     }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+
+
 }
