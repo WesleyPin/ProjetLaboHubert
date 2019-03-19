@@ -12,7 +12,9 @@ class FrontController extends Controller
      */
     public function index()
     {
-        return $this->render('front/index.html.twig');
+        $activities = $this->getDoctrine()->getRepository('App:Activite')->findby(['parent'=>null]);
+
+        return $this->render('front/index.html.twig',['activities'=>$activities]);
     }
 
     /**
