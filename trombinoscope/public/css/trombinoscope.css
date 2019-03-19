@@ -8,7 +8,17 @@
 }
 
 .btn{
+  display: block;
+  text-decoration: none;
+  background-color: #2c3e50;
+  padding: 8px 15px;
+  max-width: 150px;
+  border-radius: 5px;
+  color: #ffffff;
+}
 
+.btn:hover{
+  background-color: #1a242f;
 }
 
 #main_container{
