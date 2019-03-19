@@ -14,4 +14,13 @@ class FrontController extends Controller
     {
         return $this->render('front/index.html.twig');
     }
+
+    /**
+     * @Route("/load_other_section", name="load_other_section")
+     */
+    public function load_other_section()
+    {
+        return $this->render('front/index.html.twig');
+    }
+
 }
