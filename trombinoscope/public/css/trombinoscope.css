@@ -1,0 +1,57 @@
+#main{
+  padding: 20px 140px;
+}
+
+#main h1{
+  text-align: center;
+  font-family:
+}
+
+.btn{
+
+}
+
+#main_container{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.item{
+  margin: 10px;
+  text-align: center;
+  width: 320px;
+  height: 110px;
+  box-shadow: 0 0 4px #ccc;
+  border-radius: 25px;
+  background: linear-gradient(to top,#a8ccf4 0%,#ffffff 100%);
+}
+
+.item h2{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.no_style{
+  text-decoration: none;
+  color: black;
+}
+
+.no_style:hover{
+  text-decoration: none;
+  color: black
+}
+
+
+.no_style:focus{
+  text-decoration: none;
+  color: black
+}
+
+.vertical_align{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
