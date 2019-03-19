@@ -17,7 +17,8 @@ class Responsable
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\OneToOne(targetEntity="App\Entity\Personne")
+     * @ORM\JoinColumn(name="responsable", referencedColumnName="id")
      */
     private $responsable;
 

@@ -17,12 +17,14 @@ class Workon
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\OneToOne(targetEntity="App\Entity\Personne")
+     * @ORM\JoinColumn(name="personne", referencedColumnName="id")
      */
     private $personne;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\OneToOne(targetEntity="App\Entity\Activite")
+     * @ORM\JoinColumn(name="activite", referencedColumnName="id")
      */
     private $activite;
 

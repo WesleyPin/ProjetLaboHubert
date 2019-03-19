@@ -86,6 +86,14 @@ class Personne
      */
     private $status;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Compte")
+     * @ORM\JoinColumn(name="compte", referencedColumnName="id")
+     */
+    private $compte;
+
+
+
     public function getId()
     {
         return $this->id;
@@ -258,4 +266,16 @@ class Personne
 
         return $this;
     }
+
+    public function getCompte()
+    {
+        return $this->compte;
+    }
+
+    public function setCompte($compte)
+    {
+        $this->compte = $compte;
+    }
+
+
 }

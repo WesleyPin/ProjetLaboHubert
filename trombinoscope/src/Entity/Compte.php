@@ -27,11 +27,6 @@ class Compte
     private $password;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $role;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $homeDirectory;
@@ -45,6 +40,12 @@ class Compte
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $enddate;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Role")
+     * @ORM\JoinColumn(name="role", referencedColumnName="id")
+     */
+    private $role;
 
     public function getId()
     {
