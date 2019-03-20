@@ -4,12 +4,27 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="{{ asset('css/trombinoscope.css') }}">
         <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <title>{% block title %}Welcome{% endblock %}</title>
         {% block stylesheets %}
         {% endblock %}
     </head>
     <body>
+        <header>
+            <div class="logo">
+                <img src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
+            </div>
+            <div class="flex">
+                <div class="vertical_align">
+                    <button class="btn" data-toggle="modal" data-target="#modal_reservation">Réserver une salle</button>
+                </div>
+                <div class="vertical_align">
+                    <input type="submit" class="submit_search" value="Rechercher" data-toggle="modal" data-target="#modal_search">
+                </div>
+            </div>
+        </header>
         {% block body %}
         {% endblock %}
         {% block scripts %}

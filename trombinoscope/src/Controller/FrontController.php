@@ -37,7 +37,21 @@ class FrontController extends Controller
         return new JsonResponse(json_encode(
             $html
         ), 200);
+    }
 
+    /**
+     * @Route("/search_someone", name="search_someone")
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function search_someone(Request $request)
+    {
+        $name =  $request->request->get('name');
+        $users = $this->getDoctrine()->getRepository('App:Personne')->search($name);
+        $html = $this->container->get('twig')->render('front/item_search.html.twig',['users'=>$users]);
+        return new JsonResponse(json_encode(
+            $html
+        ), 200);
     }
 
 }
