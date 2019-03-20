@@ -26,10 +26,14 @@ class FrontController extends Controller
     public function load_other_section(Request $request)
     {
         $id= $request->request->get('id');
+        $cpt = $request->request->get('cpt');
 
         $children = $this->getDoctrine()->getRepository('App:Activite')->findby(['parent'=>$id]);
+        if (!empty($children))
+            $html = $this->container->get('twig')->render('front/item.html.twig',['children'=>$children,'cpt'=>$cpt]);
+        else
+            $html = "none";
 
-        $html = $this->container->get('twig')->render('front/item.html.twig',['children'=>$children]);
         return new JsonResponse(json_encode(
             $html
         ), 200);

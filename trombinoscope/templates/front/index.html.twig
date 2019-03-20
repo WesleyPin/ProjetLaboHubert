@@ -8,16 +8,18 @@
 		<a href="#" class="btn">Réserver une salle</a>
 		<div id="container_btn_back">
 		</div>
-		<div id="main_container">
-			{% for activity in activities %}
-				<div class="link" id="item" onclick="load({{ activity.id }})">
-					<div class="item vertical_align">
-						<div>
-							<h2>{{ activity.label }}</h2>
+		<div id="container_all">
+			<div class="container">
+				{% for activity in activities %}
+					<div class="link" id="item" onclick="load({{ activity.id }},0)">
+						<div class="item vertical_align" style="background: linear-gradient(to top,{{ activity.color }} 0%,#ffffff 100%);">
+							<div>
+								<h2>{{ activity.label }}</h2>
+							</div>
 						</div>
 					</div>
-				</div>
-			{% endfor %}
+				{% endfor %}
+			</div>
 		</div>
 	</main>
 
@@ -25,19 +27,44 @@
 
 {% block scripts %}
 	<script>
-        function  load(val) {
-            var json = {
-                'id': val
-            };
+		var cpt = 1;
+		var old_select = -1;
 
-            var path = "{{ path('load_other_section')|escape('js') }}";
+		function  load(id,id_category) {
 
-            $.post(path, json, function (retour) {
+			if (id != old_select) {
+				old_select = id;
 
-                $('#main_container').html(JSON.parse(retour));
+				refresh_tree(id_category, cpt);
 
-                console.log(JSON.parse(retour));
-            });
+				var json = {
+					'id': id,
+					'cpt': cpt
+				};
+
+				var path = "{{ path('load_other_section')|escape('js') }}";
+
+				$.post(path, json, function (retour) {
+
+					if (JSON.parse(retour) != "none") {
+						let old = $('#container_all').html();
+						$('#container_all').html(old + JSON.parse(retour));
+						cpt = cpt + 1;
+					}
+				});
+			}
         }
+
+        function refresh_tree(id_category,end){
+			let i = id_category+1;
+			let u = end + 1;
+
+			for (i;i<u;i++){
+				$('#item'+i).remove();
+				$('#icon_arrow_'+i).remove();
+			}
+
+			cpt= id_category + 1;
+		}
 	</script>
 {% endblock %}

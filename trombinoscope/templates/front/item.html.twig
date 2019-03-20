@@ -1,9 +1,14 @@
+<div class="flex flex_center arrow" id="icon_arrow_{{ cpt }}">
+    <p>&#8595;</p>
+</div>
+<div class="container" id="item{{ cpt }}">
 {% for activity in children %}
-    <div class="link" id="item" onclick="load({{ activity.id }})">
-        <div class="item vertical_align">
+    <div class="link" onclick="load({{ activity.id }},{{ cpt }})">
+        <div class="item vertical_align" style="background: linear-gradient(to top,{{ activity.color }} 0%,#ffffff 100%);">
             <div>
                 <h2>{{ activity.label }}</h2>
             </div>
         </div>
     </div>
 {% endfor %}
+</div>

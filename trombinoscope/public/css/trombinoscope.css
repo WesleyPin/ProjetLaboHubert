@@ -20,7 +20,7 @@
   background-color: #1a242f;
 }
 
-#main_container{
+#container_all .container{
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -33,9 +33,8 @@
   text-align: center;
   width: 320px;
   height: 110px;
-  box-shadow: 0 0 4px #ccc;
+  box-shadow: 0 0 25px #ccc;
   border-radius: 25px;
-  background: linear-gradient(to top,#a8ccf4 0%,#ffffff 100%);
 }
 
 .item h2{
@@ -67,4 +66,18 @@
 
 .link:hover{
   cursor: pointer;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex_center{
+  justify-content: center;
+}
+
+.arrow p{
+  margin: 0;
+  font-size: 55px;
+  font-weight: bold;
 }
