@@ -1,0 +1,9 @@
+{% for activity in children %}
+    <div class="link" id="item" onclick="load({{ activity.id }})">
+        <div class="item vertical_align">
+            <div>
+                <h2>{{ activity.label }}</h2>
+            </div>
+        </div>
+    </div>
+{% endfor %}

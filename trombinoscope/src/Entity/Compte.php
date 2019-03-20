@@ -42,6 +42,11 @@ class Compte
     private $enddate;
 
     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $activated;
+
+    /**
      * @ORM\OneToOne(targetEntity="App\Entity\Role")
      * @ORM\JoinColumn(name="role", referencedColumnName="id")
      */
@@ -123,4 +128,16 @@ class Compte
 
         return $this;
     }
+
+    public function getActif()
+    {
+        return $this->activated;
+    }
+
+    public function setActif($actif)
+    {
+        $this->activated = $actif;
+    }
+
+
 }
