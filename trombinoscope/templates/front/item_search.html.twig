@@ -1,3 +1,9 @@
 {% for user in users %}
-    <div style="width: 50px;height: 50px;background-color: #5eb5e0;"></div>
+    <div class="item_user">
+        <img src="{{ asset('img/avatar.png') }}" alt="Photo de profil">
+        <div class="information">
+            <p><span class="bold"> Nom</span> : {{ user.lastname }}</p>
+            <P><span class="bold">Prénom</span> : {{ user.firstname }}</P>
+        </div>
+    </div>
 {% endfor %}

@@ -21,9 +21,9 @@ class PersonneRepository extends ServiceEntityRepository
 
     public function search($name){
         $query = $this->createQueryBuilder("p")
-            ->where("p.firstname = :name")
-            ->orWhere("p.lastname = :name")
-            ->setParameter('name',$name)
+            ->where("p.firstname LIKE :name")
+            ->orWhere("p.lastname LIKE :name")
+            ->setParameter('name',"%".$name."%")
             ->orderBy("p.firstname","ASC");
         $query = $query->getQuery()->getResult();
 

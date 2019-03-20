@@ -53,5 +53,4 @@ class FrontController extends Controller
             $html
         ), 200);
     }
-
 }

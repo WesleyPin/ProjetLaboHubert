@@ -47,7 +47,7 @@ class Compte
     private $activated;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Role")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Role")
      * @ORM\JoinColumn(name="role", referencedColumnName="id")
      */
     private $role;
