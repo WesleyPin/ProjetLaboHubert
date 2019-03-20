@@ -82,7 +82,8 @@ class Personne
     private $departuredate;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Status")
+     * @ORM\JoinColumn(name="status", referencedColumnName="id")
      */
     private $status;
 
