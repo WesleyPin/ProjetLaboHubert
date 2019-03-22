@@ -12,8 +12,7 @@ class FrontController extends AbstractController
      */
     public function index()
     {
-        return $this->render('front/index.html.twig', [
-            'controller_name' => 'FrontController',
-        ]);
+      $users = $this->getDoctrine()->getRepository('App:Personne')->findall(); //->findOneBy(['lastname'=>'Dupont'])
+        return $this->render('front/index.html.twig', ['users'=>$users]);
     }
 }
