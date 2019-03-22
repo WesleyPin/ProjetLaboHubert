@@ -3,7 +3,7 @@
 </div>
 <div class="container" id="item{{ cpt }}">
 {% for activity in children %}
-    <div class="link" onclick="load({{ activity.id }},{{ cpt }})">
+    <div class="link" onclick="load({{ activity.id }},{{ cpt }})" data-attribute="{{ cpt }}">
         <div class="item vertical_align" style="background: linear-gradient(to top,{{ activity.color }} 0%,#ffffff 100%);">
             <div>
                 <h2>{{ activity.label }}</h2>

@@ -9,9 +9,9 @@
 		<div id="container_btn_back">
 		</div>
 		<div id="container_all">
-			<div class="container">
+			<div class="container" id="item0">
 				{% for activity in activities %}
-					<div class="link" id="item" onclick="load({{ activity.id }},0)">
+					<div class="link" id="item" onclick="load({{ activity.id }},0)" data-attribute="0">
 						<div class="item vertical_align" style="background: linear-gradient(to top,{{ activity.color }} 0%,#ffffff 100%);">
 							<div>
 								<h2>{{ activity.label }}</h2>
@@ -37,5 +37,12 @@
 		$( "#name_search" ).keyup(function() {
 			search()
 		});
+
+        $(document).on("click",".link",function () {
+            var who = $(this);
+			var where =	who.attr('data-attribute');
+            activated_item(who,where);
+        });
+
 	</script>
 {% endblock %}

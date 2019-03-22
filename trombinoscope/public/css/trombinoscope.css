@@ -6,14 +6,18 @@ body{
   font-weight: bold;
 }
 
+.flex_between{
+  justify-content: space-between;
+}
+
 /* CSS HEADER */
 
-header{
+#menu_desktop{
   display: flex !important;
   justify-content: space-between;
 }
 
-header{
+#menu_desktop{
   height: 75px;
   box-shadow: 0 0 80px -20px;
   position: fixed;
@@ -21,18 +25,71 @@ header{
   background-color: white;
 }
 
-header div{
+#menu_desktop div{
   margin: 0 10px;
 }
 
-header .logo{
+#menu_desktop .logo{
   width: fit-content;
 }
 
-header .logo img{
+#menu_desktop .logo img{
   width: 150px;
   height: auto;
   margin: 8px 5px;
+}
+
+.item_desktop{
+  display: block ;
+}
+
+.item_mobile{
+  display: none !important;
+}
+
+#menu_mobile{
+  display: block;
+  width: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 80px -20px;
+}
+
+#menu_mobile .header2{
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 24px;
+}
+
+#menu_mobile .header2 div{
+ padding: 10px;
+}
+
+#menu_mobile .header2 a{
+  position: relative;
+  font-size: 32px;
+  top: -8px;
+  right: -30px;
+  color: black;
+}
+
+#menu_mobile .header2 a:hover{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container_menu div {
+  padding: 10px 0px;
+}
+
+.text-menu{
+  display: block;
+  margin: 20px 0;
+  font-size: 22px;
 }
 
 /* CSS TROMBINOSCOPE */
@@ -199,4 +256,21 @@ header .logo img{
 
 .item_user p{
   font-size: 14px;
+}
+
+.no_actived{
+  opacity: 0.4;
+}
+
+
+/* RESPONSIVE TROMBINOSCOPE */
+
+
+@media (max-width: 720px){
+  .item_mobile{
+    display: block !important;
+  }
+  .item_desktop{
+    display: none !important;
+  }
 }

@@ -46,3 +46,27 @@ function refresh_tree(id_category,end){
 
     cpt= id_category + 1;
 }
+
+
+function activated_item(item_actived,val){
+    var children = $('#item'+val).children( ".link" );
+    console.log(children.length);
+   for (let i = 0;i<children.length;i++){
+       $(children[i]).children('div').addClass('no_actived');
+   }
+   $(item_actived).children('div').removeClass('no_actived');
+}
+
+function openMenu() {
+    $('#menu_mobile').css({
+        'width': '320px',
+        'padding':'0 50px'
+    });
+}
+
+function closeMenu() {
+    $('#menu_mobile').css({
+        'width': '0px',
+        'padding':'0px'
+    });
+}

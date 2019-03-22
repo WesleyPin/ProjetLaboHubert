@@ -1,0 +1,36 @@
+<header id="menu_desktop">
+    <div class="logo">
+        <img src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
+    </div>
+    <div class="flex">
+        <div class="vertical_align item_desktop">
+            <button class="btn" data-toggle="modal" data-target="#modal_reservation">Réserver une salle</button>
+        </div>
+        <div class="vertical_align item_desktop">
+            <input type="submit" class="submit_search" value="Rechercher" data-toggle="modal"
+                   data-target="#modal_search">
+        </div>
+        <div class="vertical_align item_mobile">
+            <span class="text-menu" onclick="openMenu()">Menu &#9776;</span>
+        </div>
+    </div>
+</header>
+
+<header id="menu_mobile">
+    <div class="header2 flex flex_between">
+        <div>
+            <span>Menu</span>
+        </div>
+        <div>
+            <a class="closebtn" onclick="closeMenu()">&times;</a>
+        </div>
+    </div>
+    <div class="container_menu">
+        <div>
+            <button class="btn" data-toggle="modal" data-target="#modal_reservation">Réserver une salle</button>
+        </div>
+        <div>
+            <button class="btn" data-toggle="modal" data-target="#modal_search">Rechercher</button>
+        </div>
+    </div>
+</header>
