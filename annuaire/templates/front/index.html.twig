@@ -9,10 +9,62 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello ✅</h1>
-
+    <h1>Bienvenue sur l'annuaire</h1>
+    <table>
+      <tr>
+        <th>
+          Nom
+        </th>
+        <th>
+          Prénom
+        </th>
+        <th>
+          Mail
+        </th>
+        <th>
+          Téléphone fixe
+        </th>
+        <th>
+          Bureau
+        </th>
+        <th>
+          Bâtiment
+        </th>
+        <th>
+          Tutelle
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
     {% for user in users %}
-      <p>{{ user.firstname }}</p>
+      <tr>
+        <td>
+          {{ user.lastname }}
+        </td>
+        <td>
+          {{ user.firstname }}
+        </td>
+        <td>
+          {{ user.mail }}
+        </td>
+        <td>
+          {{ user.homephone }}
+        </td>
+        <td>
+          {{ user.office }}
+        </td>
+        <td>
+          {{ user.building }}
+        </td>
+        <td>
+          {{ user.tutelle }}
+        </td>
+        <td>
+          actions
+        </td>
+      </tr>
     {% endfor %}
+    </table>
 </div>
 {% endblock %}
