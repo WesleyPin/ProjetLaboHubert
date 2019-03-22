@@ -2,13 +2,59 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal_container_search">
                 <h3>Rechercher une personne</h3>
-                <input type="text" id="name_search" class="input_search">
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="btn_close">&times;</span>
+            </button>
+            <div class="modal_container_search">
+                <div class="attr_search">
+                    <div class="flex flex_between">
+                        <div>
+                            <p>Rechercher par nom ou prénom :</p>
+                            <input type="text" id="name_search" class="input_search">
+                        </div>
+                        <div>
+                            <a href="#" class="btn" onclick="search_avanced('attr_search','attr_search_advanced')" >Recherche avancé</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="attr_search_advanced">
+                    <div class="flex flex_between">
+                        <div>
+                            <p>Rechercher par :</p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Nom/Prénom
+                                    </td>
+                                    <td>
+                                        <input type="text" id="name_search" class="input_search">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Batiment
+                                    </td>
+                                    <td>
+                                        <input type="text" id="bat_search" class="input_search">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        n° de bureau
+                                    </td>
+                                    <td>
+                                        <input type="number" id="office_search" class="input_search" min="0">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <a href="#" class="btn" id="search_simple" onclick="search_avanced('attr_search_advanced','attr_search')">Recherche simple</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="result_search_people">
 

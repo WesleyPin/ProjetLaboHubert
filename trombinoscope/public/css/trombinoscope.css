@@ -211,17 +211,43 @@ body{
   min-height: 600px;
 }
 
-/* RESERVATION */
+
+/* TROMBI */
 .modal-header{
   border: none !important;
   padding-bottom: 0 !important;
+  background-color: #527fc2;
+  display: block;
+  height: 70px;
+  width: 100%;
+  border-radius: 5px 5px 0 0 ;
+}
+.modal-header h3{
+  text-align: center;
+  margin: 10px;
+  color: #ffffff;
 }
 
-.modal_container_reservation, .modal_container_search{
+.attr_search, .attr_search_advanced{
+   margin: 25px 10px;
+  font-weight: 700;
+}
+
+.attr_search_advanced{
+  display: none;
+}
+
+.btn_close{
+  position: relative;
+  top: -67px;
+  right: 6px;
+}
+
+.modal_container_trombi, .modal_container_search{
   padding:0 15px 20px 15px;
 }
 
-.modal_container_reservation h3, .modal_container_search h3{
+.modal_container_trombi h3, .modal_container_search h3{
   margin: 15px 0;
   text-align: center;
 }
@@ -260,6 +286,10 @@ body{
 
 .no_actived{
   opacity: 0.4;
+}
+
+table td{
+  padding: 5px 13px;
 }
 
 

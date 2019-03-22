@@ -70,3 +70,12 @@ function closeMenu() {
         'padding':'0px'
     });
 }
+
+function search_avanced(none,block){
+    $('.'+none).css({
+        'display':'none'
+    })
+    $('.'+block).css({
+        'display':'block'
+    })
+}

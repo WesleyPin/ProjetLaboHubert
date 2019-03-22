@@ -103,7 +103,7 @@ final class Versions
   'symfony/phpunit-bridge' => 'v4.2.4@2cc651a38fcb831a405c14fcb76fcb00320e7ee8',
   'symfony/test-pack' => 'v1.0.2@958d23627214f5268d211c25031650d0dd6bdf60',
   'symfony/web-server-bundle' => 'v3.4.23@c6809607bca68a5291ea9ca25a9108e78ef59648',
-  '__root__' => 'dev-master@dbaddbd958a3f496f68cccbe7a41c41733f0dc37',
+  '__root__' => 'dev-master@d1bc8a054dfa8be16767d605316a6c707282e6c8',
 );
 
     private function __construct()
