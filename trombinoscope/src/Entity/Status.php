@@ -21,17 +21,17 @@ class Status
      */
     private $label;
 
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
 
-    public function getLabel(): ?string
+    public function getLabel()
     {
         return $this->label;
     }
 
-    public function setLabel(?string $label): self
+    public function setLabel($label)
     {
         $this->label = $label;
 
