@@ -1,5 +1,9 @@
+{% if function == "display" %}
+    <div class="container result" id="item{{ cpt }}">
+{% endif %}
+
 {% for user in users %}
-    <div class="item_user">
+    <div class="item_user" onclick="{{ function }}({{ user.id }})">
         <img src="{{ asset('img/avatar.png') }}" alt="Photo de profil">
         <div class="information">
             <p><span class="bold"> Nom</span> : {{ user.lastname }}</p>
@@ -7,3 +11,6 @@
         </div>
     </div>
 {% endfor %}
+{% if function == "display" %}
+    </div>
+{% endif %}

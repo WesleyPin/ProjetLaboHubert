@@ -7,6 +7,12 @@ function search(){
 
     $.post(path, json, function (retour) {
         $('#result_search_people').html(JSON.parse(retour))
+        $('#result_search_people').css({
+            'display':'flex'
+        })
+        $('#result_choice').css({
+            'display':'none'
+        })
     });
 }
 
@@ -25,12 +31,12 @@ function  load(id,id_category) {
         var path = "/load_other_section";
 
         $.post(path, json, function (retour) {
+            console.log(JSON.parse(retour));
 
-            if (JSON.parse(retour) != "none") {
                 let old = $('#container_all').html();
                 $('#container_all').html(old + JSON.parse(retour));
                 cpt = cpt + 1;
-            }
+
         });
     }
 }
@@ -78,4 +84,31 @@ function search_avanced(none,block){
     $('.'+block).css({
         'display':'block'
     })
+}
+
+function display_someone(id){
+    var json = {
+        'id': id
+    };
+
+    var path = "/display_someone";
+
+    $.post(path, json, function (retour) {
+        $('#result_choice').css({
+            'display':'block'
+        });
+        $('#result_choice').html(JSON.parse(retour));
+        $('#result_search_people').css({
+            'display':'none'
+        });
+    });
+}
+
+function back() {
+    $('#result_search_people').css({
+        'display':'flex'
+    });
+    $('#result_choice').css({
+        'display':'none'
+    });
 }

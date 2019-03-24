@@ -1,0 +1,26 @@
+<div id="detail_profil">
+    <div>
+        <img src="{{ asset('img/avatar.png') }}" class="img_profil" alt="Photo de profil">
+        <p>{{ user.firstname }} {{ user.lastname }}</p>
+    </div>
+    <div class="vertical_align">
+        <table>
+            <tr>
+                <td class="title">Email </td>
+                <td>{{ user.mail }}</td>
+            </tr>
+            <tr>
+                <td class="title">Téléphone</td>
+                <td>{{ user.homephone }}</td>
+            </tr>
+            <tr>
+                <td class="title">Bureau n°</td>
+                <td>{{ user.office }}</td>
+            </tr>
+            <tr>
+                <td class="title">Bâtiment</td>
+                <td>{{ user.building }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

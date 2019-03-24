@@ -14,9 +14,9 @@
                             <p>Rechercher par nom ou prénom :</p>
                             <input type="text" id="name_search" class="input_search">
                         </div>
-                        <div>
+                        {#<div>
                             <a href="#" class="btn" onclick="search_avanced('attr_search','attr_search_advanced')" >Recherche avancé</a>
-                        </div>
+                        </div>#}
                     </div>
                 </div>
                 <div class="attr_search_advanced">
@@ -48,15 +48,21 @@
                                         <input type="number" id="office_search" class="input_search" min="0">
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td colspan="2"><button class="btn" data-toggle="modal" data-target="#modal_search">Rechercher</button></td>
+                                </tr>
                             </table>
                         </div>
-                        <div>
+                        {#<div>
                             <a href="#" class="btn" id="search_simple" onclick="search_avanced('attr_search_advanced','attr_search')">Recherche simple</a>
-                        </div>
+                        </div>#}
                     </div>
                 </div>
             </div>
             <div id="result_search_people">
+
+            </div>
+            <div id="result_choice">
 
             </div>
         </div>
