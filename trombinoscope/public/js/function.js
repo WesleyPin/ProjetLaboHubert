@@ -68,6 +68,10 @@ function openMenu() {
         'width': '320px',
         'padding':'0 50px'
     });
+    $('#extra_space').css({
+        'opacity':'1',
+        'visibility':'visible'
+    })
 }
 
 function closeMenu() {
@@ -75,6 +79,10 @@ function closeMenu() {
         'width': '0px',
         'padding':'0px'
     });
+    $('#extra_space').css({
+        'opacity':'0',
+        'visibility':'hidden'
+    })
 }
 
 function search_avanced(none,block){
