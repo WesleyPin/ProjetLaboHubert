@@ -1,0 +1,47 @@
+.login-block {
+    border: 1px #dadce0 solid;
+    padding: 10px;
+    width: 25%;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 25px #ccc;
+}
+
+.error {
+    color: red;
+}
+
+.login-input {
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px #dadce0 solid;
+    outline: none;
+}
+
+.login-input:active {
+    border-color: blue;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.texte {
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+
+.login-button {
+    padding: 10px;
+    color: white;
+    background-color: blue;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+<form method="post">
+    <div class="login-block">
+        <div class="center">
+            <img src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
+            <h1 class="texte">Connexion</h1>
+            <div>
+                <input class="login-input" type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" placeholder="Login" required autofocus>
+            </div>
+            <div>
+                <input class="login-input" type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+            </div>
+
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+        </div>
+
+        <div class="right">
+            <button class="login-button" type="submit">Connexion</button>
+        </div>
+        {% if error %}
+            <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+    </div>
+</form>
+{% endblock %}
