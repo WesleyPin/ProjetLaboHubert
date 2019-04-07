@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello FrontController!{% endblock %}
+{% block title %}Annuaire{% endblock %}
 
 {% block body %}
 <style>
@@ -10,32 +10,34 @@
 
 <div class="example-wrapper">
     <h1>Bienvenue sur l'annuaire {{ app.user.username }}</h1>
-    <table>
+    <table class="table-annuaire">
       <tr>
-        <th>
-          Nom
-        </th>
-        <th>
-          Prénom
-        </th>
-        <th>
-          Mail
-        </th>
-        <th>
-          Téléphone fixe
-        </th>
-        <th>
-          Bureau
-        </th>
-        <th>
-          Bâtiment
-        </th>
-        <th>
-          Tutelle
-        </th>
-        <th>
-          Actions
-        </th>
+        <thead>
+          <th>
+            Nom
+          </th>
+          <th>
+            Prénom
+          </th>
+          <th>
+            Mail
+          </th>
+          <th>
+            Tél. fixe
+          </th>
+          <th>
+            Bureau
+          </th>
+          <th>
+            Bâtiment
+          </th>
+          <th>
+            Tutelle
+          </th>
+          <th>
+            Actions
+          </th>
+        </thead>
       </tr>
     {% for user in users %}
       <tr>
@@ -61,7 +63,12 @@
           {{ user.tutelle }}
         </td>
         <td>
-          actions
+          <span class="do-not-wrap">
+            <!-- TODO : Ajouter leur action -->
+            <button class="button-view"><img src="{{ asset('img/view-26.png') }}" alt="Voir"></button>
+            <button class="button-edit"><img src="{{ asset('img/edit-26.png') }}" alt="Modifier"></button>
+            <button class="button-delete"><img src="{{ asset('img/delete-26.png') }}" alt="Supprimer"></button>
+          </span>
         </td>
       </tr>
     {% endfor %}

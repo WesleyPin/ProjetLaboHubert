@@ -45,3 +45,87 @@
     outline: none;
     margin-top: 10px;
 }
+
+/* Tableau annuaire */
+.table-annuaire {
+    border-collapse: collapse;
+}
+
+.table-annuaire thead {
+    background-color: #365684;
+}
+
+.table-annuaire thead th {
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+}
+
+.table-annuaire thead th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.table-annuaire thead th:last-child {
+    border-top-right-radius: 20px;
+}
+
+/* Pour chaque <tr>, impair */
+.table-annuaire tbody tr:nth-child(odd){
+    background-color: #fcfdff;
+}
+
+/* Pour chaque <tr>, pair */
+.table-annuaire tbody tr:nth-child(even){
+    background-color: #eaf5ff;
+}
+
+.table-annuaire td {
+    text-align: center;
+    /*border: 1px solid #17324f;*/
+    padding: 10px;
+}
+
+/* Boutons dans le tableau annuaire */
+.table-annuaire button {
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Boutons mouse hover */
+.table-annuaire button:hover {
+    filter: opacity(.8);
+}
+
+/* Icônes des boutons */
+.table-annuaire button img {
+    padding : 3px 0 3px 0;
+}
+
+/* Permet de ne pas sauter de ligne pour les boutons */
+.do-not-wrap {
+    white-space:nowrap;
+}
+
+/* Bouton Voir */
+.button-view {
+    background-image: linear-gradient(120deg, #94baef 0%, #365684 100%);
+}
+
+/* Bouton Modifier */
+.button-edit {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+/* Bouton Supprimer */
+.button-delete {
+    background-image: linear-gradient(120deg, #ff002a 0%, #e01637 100%);
+}
+
+/* Smartphones */
+@media (max-width: 720px){
+    .table-annuaire {
+        /* TODO : Rendre le tableau responsive */
+    }
+}
