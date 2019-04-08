@@ -1,24 +1,36 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Log in!{% endblock %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ asset('css/annuaire.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <title>{% block title %}Annuaire GeePs - Connexion{% endblock %}</title>
+</head>
 
 {% block body %}
 <form method="post">
     <div class="login-block">
         <div class="center">
-            <img src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
+            <img class="login-logo" src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
             <h1 class="texte">Connexion</h1>
             <div>
-                <input class="login-input" type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" placeholder="Login" required autofocus>
+                <div class="form-group">
+                    <label class="input-label" id="labelLogin">Login</label>
+                    <input class="login-input" type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" required autofocus>
+                </div>
             </div>
             <div>
-                <input class="login-input" type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                <div class="form-group">
+                    <label class="input-label" id="labelMdp">Mot de passe</label>
+                    <input class="login-input" type="password" name="password" id="inputPassword" class="form-control" required>
+                </div>
             </div>
 
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
         </div>
 
-        <div class="right">
+        <div class="center">
             <button class="login-button" type="submit">Connexion</button>
         </div>
         {% if error %}
@@ -27,3 +39,4 @@
     </div>
 </form>
 {% endblock %}
+</html>

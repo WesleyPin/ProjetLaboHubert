@@ -1,27 +1,52 @@
+body {
+    margin: 0;
+}
+
 .login-block {
     border: 1px #dadce0 solid;
     padding: 10px;
     width: 25%;
     margin: auto;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     box-shadow: 0 0 25px #ccc;
+    margin-top: 60px;
 }
 
 .error {
     color: red;
 }
 
+.login-logo {
+    width: 60%;
+}
+
 .login-input {
     width: 60%;
     margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px #dadce0 solid;
+    padding: 8px 0px;
+    border : none;
+    border-bottom: 1px #dadce0 solid;
     outline: none;
 }
 
-.login-input:active {
-    border-color: blue;
+.form-label {
+    margin:auto;
+    width: 60%;
+    text-align: left;
+}
+
+
+
+.input-label {
+    position: absolute;
+    padding: 8px 0px;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+
+}
+
+.input-label:focus {
+    transform: translateY(-125%);
+    font-size: .75em;
 }
 
 .center {
@@ -33,17 +58,20 @@
 }
 
 .texte {
-    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .login-button {
     padding: 10px;
     color: white;
     background-color: blue;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     border: none;
     outline: none;
-    margin-top: 10px;
+    margin-top: 20px;
+    width: 60%;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 /* Tableau annuaire */
@@ -129,3 +157,20 @@
         /* TODO : Rendre le tableau responsive */
     }
 }
+
+.navbar {
+    box-shadow: 0 0 80px -20px;
+    height: 75px;
+    width: 100%;
+}
+
+.navbar div {
+    margin: 0px 10px;
+}
+
+.navbar-logo {
+    width: 150px;
+    height: auto;
+    margin: 8px 5px;
+}
+>>>>>>> Stashed changes
