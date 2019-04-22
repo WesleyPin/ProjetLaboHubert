@@ -105,13 +105,17 @@ body {
 
 /* Pour chaque <tr>, pair */
 .table-annuaire tbody tr:nth-child(even){
-    background-color: #eaf5ff;
+    background-color: #f9f9f9;
 }
 
 .table-annuaire td {
     text-align: center;
     /*border: 1px solid #17324f;*/
     padding: 10px;
+}
+
+.table-annuaire tbody tr:hover{
+    background-color: #f6f6f6;
 }
 
 /* Boutons dans le tableau annuaire */
