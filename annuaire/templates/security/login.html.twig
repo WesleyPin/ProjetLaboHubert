@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset('css/annuaire.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="{{ asset('js/jquery.js') }}"></script>
-    <title>{% block title %}Annuaire GeePs - Connexion{% endblock %}</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ asset('css/annuaire.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <title>
+            {% block title %}Annuaire GeePs - Connexion
+            {% endblock %}
+        </title>
+    </head>
 
-{% block body %}
-<form method="post">
-    <div class="login-block">
-        <div class="center">
-            <img class="login-logo" src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
-            <h1 class="texte">Connexion</h1>
-            <div>
-                <div class="form-group">
-                    <label class="input-label" id="labelLogin">Login</label>
-                    <input class="login-input" type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" required autofocus>
+    {% block body %}
+        <form method="post">
+            <div class="login-block">
+                <div class="center">
+                    <img class="login-logo" src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
+                    <h1 class="texte titre">Connexion</h1>
+                    <div>
+                        <div class="form-group">
+                            <input class="login-input" placeholder="Login" type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" required autofocus>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <input class="login-input" class="login-input" id="inputPassword" name="password" placeholder="Mot de passe" required type="password">
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                 </div>
-            </div>
-            <div>
-                <div class="form-group">
-                    <label class="input-label" id="labelMdp">Mot de passe</label>
-                    <input class="login-input" type="password" name="password" id="inputPassword" class="form-control" required>
+
+                <div class="center">
+                    <button class="login-button" id="submitCo" type="submit">Connexion</button>
                 </div>
+                {% if error %}
+                    <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
             </div>
-
-            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-        </div>
-
-        <div class="center">
-            <button class="login-button" type="submit">Connexion</button>
-        </div>
-        {% if error %}
-            <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
-    </div>
-</form>
-{% endblock %}
+        </form>
+    {% endblock %}
 </html>
