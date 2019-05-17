@@ -16,7 +16,7 @@
             <div class="login-block">
                 <div class="center">
                     <img class="login-logo" src="{{ asset('img/logo-geeps.png') }}" alt="Logo GeePs">
-                    <h1 class="texte titre">Connexion</h1>
+                    <h2 class="texte titre">Connexion</h2>
                     <div>
                         <div class="form-group">
                             <input class="login-input" placeholder="Login" type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" required autofocus>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="center">
-                    <button class="login-button" id="submitCo" type="submit">Connexion</button>
+                    <button class="login-button" id="submitCo" type="submit">JE ME CONNECTE</button>
                 </div>
                 {% if error %}
                     <div class="error">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
