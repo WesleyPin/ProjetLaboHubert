@@ -12,7 +12,7 @@ $(document).ready(function () {
         $("#inputPassword").css("background-color", "white");
     })
     $("#submitCo").mouseover(function () {
-        $("#submitCo").css("background-color", "rgba(0, 59, 140s, 0.5)");
+        $("#submitCo").css("background-color", "rgba(0, 59, 140, 0.5)");
     })
     $("#submitCo").mouseout(function () {
         $("#submitCo").css("background-color", "rgba(0, 81, 192, 1)");
