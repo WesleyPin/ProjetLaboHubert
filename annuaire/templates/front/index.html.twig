@@ -1,88 +1,91 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Annuaire{% endblock %}
+{% block title %}Annuaire
+{% endblock %}
 
 {% block body %}
-<script>
-  $(document).ready( function () {
-    $('#annuaire').DataTable( {
-      "language": {
-        "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
-      }
-    } );
-  } );
-</script>
+    <script>
+        $(document).ready(function () {
+            $('#annuaire').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                }
+            });
+        });
+    </script>
 
-<div>
-    <h1>Bienvenue sur l'annuaire {{ app.user.username }}</h1>
-    <table id="annuaire" class="table-annuaire cell-border">
-      <thead>
-        <tr>
-          <th>
-            Nom
-          </th>
-          <th>
-            Prénom
-          </th>
-          <th>
-            Mail
-          </th>
-          <th>
-            Tél. fixe
-          </th>
-          <th>
-            Bureau
-          </th>
-          <th>
-            Bâtiment
-          </th>
-          <th>
-            Tutelle
-          </th>
-          <th>
-            Actions
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-    {% for user in users %}
-        <tr>
-          <td>
-            {{ user.lastname }}
-          </td>
-          <td>
-            {{ user.firstname }}
-          </td>
-          <td>
-            {{ user.mail }}
-          </td>
-          <td>
-            {{ user.homephone }}
-          </td>
-          <td>
-            {{ user.office }}
-          </td>
-          <td>
-            {{ user.building }}
-          </td>
-          <td>
-            {{ user.tutelle }}
-          </td>
-          <td>
-            <span class="do-not-wrap">
-              <!-- TODO : Ajouter leur action -->
-              <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
-              <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
-              <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
-            </span>
-          </td>
-        </tr>
-    {% endfor %}
-      </tbody>
-      <tfoot>
-
-      </tfoot>
-    </table>
-</div>
+    <div class="tab-block">
+        <h1>Bienvenue sur l'annuaire
+            {{ app.user.username }}</h1>
+        <table class="table-annuaire cell-border" id="annuaire">
+            <thead>
+                <tr>
+                    <th>
+                        Nom
+                    </th>
+                    <th>
+                        Prénom
+                    </th>
+                    <th>
+                        Mail
+                    </th>
+                    <th>
+                        Tél. fixe
+                    </th>
+                    <th>
+                        Bureau
+                    </th>
+                    <th>
+                        Bâtiment
+                    </th>
+                    <th>
+                        Tutelle
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>
+                            {{ user.lastname }}
+                        </td>
+                        <td>
+                            {{ user.firstname }}
+                        </td>
+                        <td>
+                            {{ user.mail }}
+                        </td>
+                        <td>
+                            {{ user.homephone }}
+                        </td>
+                        <td>
+                            {{ user.office }}
+                        </td>
+                        <td>
+                            {{ user.building }}
+                        </td>
+                        <td>
+                            {{ user.tutelle }}
+                        </td>
+                        <td>
+                            <span
+                                class="do-not-wrap">
+                                <!-- TODO : Ajouter leur action -->
+                                <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
+                                <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
+                                <a href="{{ path('delete', { 'id': user.id }) }}">
+                                    <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
 
 {% endblock %}
