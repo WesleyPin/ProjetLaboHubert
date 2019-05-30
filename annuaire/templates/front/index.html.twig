@@ -17,6 +17,9 @@
     <div class="tab-block">
         <h1>Bienvenue sur l'annuaire
             {{ app.user.username }}</h1>
+        <a href="{{ path('form_personne', { 'id': '-1' }) }}">
+            <button class="button-add" title="Ajouter">Ajouter une personne</button>
+        </a>
         <table class="table-annuaire cell-border" id="annuaire">
             <thead>
                 <tr>
@@ -75,7 +78,9 @@
                                 class="do-not-wrap">
                                 <!-- TODO : Ajouter leur action -->
                                 <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
-                                <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
+                                <a href="{{ path('form_personne', { 'id': user.id }) }}">
+                                    <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
+                                </a>
                                 <a href="{{ path('delete', { 'id': user.id }) }}">
                                     <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
                                 </a>
