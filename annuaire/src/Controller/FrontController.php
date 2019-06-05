@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 use App\Entity\Personne;
 
@@ -64,8 +65,8 @@ class FrontController extends AbstractController
         $form_personne = $this->createFormBuilder($user)
             ->add('firstname')
             ->add('lastname')
-            ->add('birthdate', DateTimeType::class, [
-                'years' => range(date('Y') -100, date('Y') -15)
+            ->add('birthdate', DateType::class, [
+                'years' => range(date('Y') -90, date('Y') -15)
             ])
             ->add('placebirth')
             ->add('mail')
@@ -75,11 +76,11 @@ class FrontController extends AbstractController
             ->add('building')
             ->add('tutelle')
             ->add('ingeeps')
-            ->add('arrivaldate', DateTimeType::class, [
+            ->add('arrivaldate', DateType::class, [
                 'years' => range(date('Y') -20, date('Y'))
             ])
-            ->add('departuredate', DateTimeType::class, [
-                'years' => range(date('Y') -20, date('Y'))
+            ->add('departuredate', DateType::class, [
+                'years' => range(date('Y') +0, date('Y')),
             ])
             //->add('status')   // ne fonctionne pas (clé étrangère)
             //->add('compte')
