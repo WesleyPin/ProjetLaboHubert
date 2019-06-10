@@ -31,7 +31,7 @@
                     Date de naissance
                 </td>
                 <td>
-                    {{ user.birthdate|date('d-m-Y') }}
+                    {{ user.birthdate|date('d/m/Y') }}
                 </td>
             </tr>
             <tr>
@@ -104,7 +104,7 @@
                     Date d'arrivée
                 </td>
                 <td>
-                    {{ user.arrivaldate|date('d-m-Y H:i:s') }}
+                    {{ user.arrivaldate|date('d/m/Y') }}
                 </td>
             </tr>
             <tr>
@@ -112,7 +112,7 @@
                     Date de départ
                 </td>
                 <td>
-                    {{ user.departuredate|date('d-m-Y H:i:s') }}
+                    {{ user.departuredate|date('d/m/Y') }}
                 </td>
             </tr>
             {% endif %}
