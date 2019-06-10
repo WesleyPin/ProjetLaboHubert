@@ -77,7 +77,9 @@
                             <span
                                 class="do-not-wrap">
                                 <!-- TODO : Ajouter leur action -->
-                                <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
+                                <a href="{{ path('display_personne', { 'id': user.id }) }}">
+                                    <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
+                                </a>
                                 <a href="{{ path('form_personne', { 'id': user.id }) }}">
                                     <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
                                 </a>

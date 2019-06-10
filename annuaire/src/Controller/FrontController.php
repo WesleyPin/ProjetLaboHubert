@@ -28,6 +28,18 @@ class FrontController extends AbstractController
     }
 
     /**
+     * @Route("/display_personne/{id}", name="display_personne")
+     * @param $id
+     * @return mixed
+     */
+    public function seeUser($id)
+    {
+        $user = $this->getDoctrine()->getRepository('App:Personne')->findOneBy(['id' => $id]);
+
+        return $this->render('front/display_personne.html.twig', ['user'=>$user]);
+    }
+
+    /**
      * @Route("/delete/{id}", name="delete")
      */
     public function delUser($id)
@@ -62,6 +74,7 @@ class FrontController extends AbstractController
             $user = $this->getDoctrine()->getRepository('App:Personne')->findOneBy(['id' => $id]);
         }
 
+        // Création du formulaire
         $form_personne = $this->createFormBuilder($user)
             ->add('firstname')
             ->add('lastname')
@@ -82,8 +95,6 @@ class FrontController extends AbstractController
             ->add('departuredate', DateType::class, [
                 'years' => range(date('Y') +0, date('Y')),
             ])
-            //->add('status')   // ne fonctionne pas (clé étrangère)
-            //->add('compte')
             ->getForm();
 
         $form_personne->handleRequest($request);

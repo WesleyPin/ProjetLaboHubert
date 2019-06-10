@@ -155,6 +155,10 @@ body {
     background-color: #f6f6f6;
 }
 
+.table-annuaire a{
+    text-decoration: none;
+}
+
 /* Boutons dans le tableau annuaire */
 .table-annuaire button {
     border-radius: 5px;
@@ -253,6 +257,65 @@ body {
 .tab-block h1 {
     letter-spacing: 1px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.table-user{
+    width: 100%;
+    border-collapse:collapse;
+    border-spacing:0;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.table-user tr:nth-child(even){
+    background-color:#f1f1f1;
+}
+
+.table-user tr:nth-child(odd){
+    background-color:#fff;
+}
+
+.table-user td{
+    width: 50%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.table-btn{
+    width: 100%;
+}
+
+.table-btn td{
+    width: 50%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.table-btn button:hover {
+    filter: opacity(.8);
+}
+
+.btn-modify-user{
+    width: 70%;
+    background-image: linear-gradient(120deg, #ffa444 0%, #fc983c 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete-user{
+    width: 70%;
+    background-image: linear-gradient(120deg, #dd8888 0%, #ff002a 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .form-modify{
