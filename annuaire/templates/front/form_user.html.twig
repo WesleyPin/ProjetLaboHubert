@@ -4,12 +4,13 @@
 {% endblock %}
 
 {% block body %}
+
     <div>
         <a class="lien-retour" href="{{ path("annuaire") }}">< Retour</a>
     </div>
 
     <div class="form-modify">
-        {{ form_start(form_personne) }}
+        {{ form_start(form_personne,  {'attr': {'class': 'classTest'}}) }}
         <h1>Ajout/Modification</h1>
         <div class="input-text">
             {{ form_row(form_personne.firstname, {'label': 'Prénom'}) }}
@@ -65,6 +66,13 @@
                 DateInGeeps.show();
             }else{
                 DateInGeeps.hide();
+                $('#form_arrivaldate_year').val("");
+                $('#form_arrivaldate_month').val("");
+                $('#form_arrivaldate_day').val("");
+
+                $('#form_departuredate_year').val("");
+                $('#form_departuredate_month').val("");
+                $('#form_departuredate_day').val("");
             }
 
             InGeeps.change( function () {
@@ -72,19 +80,15 @@
                     DateInGeeps.slideDown();
                 }else{
                     DateInGeeps.slideUp();
+                    $('#form_arrivaldate_year').val("");
+                    $('#form_arrivaldate_month').val("");
+                    $('#form_arrivaldate_day').val("");
+
+                    $('#form_departuredate_year').val("");
+                    $('#form_departuredate_month').val("");
+                    $('#form_departuredate_day').val("");
                 }
             })
-
-            $('#form_arrivaldate_year').val("");
-            $('#form_arrivaldate_month').val("");
-            $('#form_arrivaldate_day').val("");
-
-            $('#form_departuredate_year').val("");
-            $('#form_departuredate_month').val("");
-            $('#form_departuredate_day').val("");
-
-
-
         });
     </script>
 {% endblock %}

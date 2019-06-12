@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PersonneRepository")
@@ -17,12 +18,18 @@ class Personne
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=20, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^[A-Za-zéèêë\-]+$/"
+     * )
      */
     private $firstname;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=20, nullable=false)
+     * @Assert\Regex(
+     *     pattern="/^[A-Za-zéèêë\-]+$/"
+     * )
      */
     private $lastname;
 
@@ -33,21 +40,25 @@ class Personne
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex("/^[A-Z][A-Za-zéèêë\-]+$/")
      */
     private $placebirth;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex("/^(0)[1-9](\d{2}){4}$/")
      */
     private $homephone;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex("/^(0)[1-9](\d{2}){4}$/")
      */
     private $mobilephone;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/")
      */
     private $mail;
 
