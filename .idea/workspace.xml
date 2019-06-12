@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91126c00-952c-4376-90d9-931d40aeb4f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/annuaire/public/img/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annuaire/templates/front/display_compte.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/annuaire/templates/front/form_compte.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/public/css/annuaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/public/css/annuaire.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/public/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/public/js/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/annuaire/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="711">
-              <caret line="404" column="1" lean-forward="true" selection-start-line="404" selection-start-column="1" selection-end-line="404" selection-end-column="1" />
+              <caret line="404" column="1" selection-start-line="404" selection-start-column="1" selection-end-line="404" selection-end-column="1" />
               <folding>
                 <element signature="e#34#56#0#PHP" expanded="true" />
               </folding>
@@ -60,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="144" column="26" lean-forward="true" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
+            <state relative-caret-position="357">
+              <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
               <folding>
                 <element signature="e#73#79#0#HTML" expanded="true" />
                 <element signature="e#288#294#0#HTML" expanded="true" />
@@ -74,17 +65,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
+            <state relative-caret-position="225">
               <caret line="354" column="18" selection-start-line="354" selection-start-column="18" selection-end-line="354" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annuaire/templates/front/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+            <state relative-caret-position="493">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -362,12 +353,12 @@
       <updated>1560288635643</updated>
       <workItem from="1560288640657" duration="4161000" />
       <workItem from="1560300938260" duration="1835000" />
-      <workItem from="1560362286542" duration="6074000" />
+      <workItem from="1560362286542" duration="6428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12070000" />
+    <option name="totallyTimeSpent" value="12424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -443,13 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_activity.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -460,20 +444,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="711">
-          <caret line="404" column="1" lean-forward="true" selection-start-line="404" selection-start-column="1" selection-end-line="404" selection-end-column="1" />
-          <folding>
-            <element signature="e#34#56#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="144" column="26" lean-forward="true" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
+        <state relative-caret-position="357">
+          <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
           <folding>
             <element signature="e#73#79#0#HTML" expanded="true" />
             <element signature="e#288#294#0#HTML" expanded="true" />
@@ -482,17 +463,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_activity.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
+        <state relative-caret-position="225">
           <caret line="354" column="18" selection-start-line="354" selection-start-column="18" selection-end-line="354" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        <state relative-caret-position="711">
+          <caret line="404" column="1" selection-start-line="404" selection-start-column="1" selection-end-line="404" selection-end-column="1" />
+          <folding>
+            <element signature="e#34#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
