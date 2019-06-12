@@ -177,7 +177,14 @@ class FrontController extends AbstractController
             $om->persist($contrat);
             $om->flush();
 
-            return $this->redirectToRoute('display_personne', ['id' => $id]);
+            if($id_contrat == -1)   // Ajout
+            {
+                return $this->redirectToRoute('display_personne', ['id' => $id]);
+            }
+            elseif($id_contrat != -1)   // modif
+            {
+                return $this->redirectToRoute('display_contrat', ['id_contrat' => $id_contrat, 'id' => $id]);
+            }
         }
 
         return $this->render('front/form_contrat.html.twig', ['form_contrat' => $form_contrat->createView(), 'user' => $user]);

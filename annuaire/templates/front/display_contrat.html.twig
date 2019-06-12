@@ -36,7 +36,7 @@
             </tr>
             <tr>
                 <td>
-                    Administrateur
+                    Responsable
                 </td>
                 <td>
                     {{ contrat.administrator }}
@@ -82,9 +82,7 @@
                     {{ contrat.startdate|date('d/m/Y') }}
                 </td>
             </tr>
-            
-            
-            {% if contrat.type != '1' %}
+            {% if type.id != '1' %}
             <tr>
                 <td>
                     Date de fin
