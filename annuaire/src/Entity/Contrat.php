@@ -19,11 +19,6 @@ class Contrat
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $typeof;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $subject;
 
     /**
@@ -81,18 +76,6 @@ class Contrat
     public function getId()
     {
         return $this->id;
-    }
-
-    public function getTypeof()
-    {
-        return $this->typeof;
-    }
-
-    public function setTypeof($typeof)
-    {
-        $this->typeof = $typeof;
-
-        return $this;
     }
 
     public function getSubject()

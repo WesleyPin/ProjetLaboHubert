@@ -116,6 +116,25 @@
                 </td>
             </tr>
             {% endif %}
+            <tr>
+                <td>
+                    Contrat
+                </td>
+                <td>
+                {% if contrat == null %}
+                    <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': '-1' }) }}">
+                        <button class="btn-add-contrat">Ajouter</button>
+                    </a>
+                {% else %}
+                    <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': contrat.id }) }}">
+                        <button class="btn-modify-contrat">Modifier</button>
+                    </a>
+                    <a href="{{ path('delete_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
+                        <button class="btn-delete-contrat">Supprimer</button>
+                    </a>
+                {% endif %}
+                </td>
+            </tr>
         </table>
         <table class="table-btn" style="width: 100%; text-align:center;">
             <tr>
