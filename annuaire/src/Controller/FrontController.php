@@ -96,7 +96,7 @@ class FrontController extends AbstractController
                 'years' => range(date('Y') -20, date('Y'))
             ])
             ->add('departuredate', DateType::class, [
-                'years' => range(date('Y') +0, date('Y')),
+                'years' => range(date('Y') +20, date('Y')),
             ])
             ->getForm();
 
@@ -110,7 +110,7 @@ class FrontController extends AbstractController
             return $this->redirectToRoute('annuaire');
         }
 
-        return $this->render('front/form_user.html.twig', ['form_personne' => $form_personne->createView()]);
+        return $this->render('front/form_user.html.twig', ['form_personne' => $form_personne->createView(), 'id' => $id]);
     }
 
     /**
