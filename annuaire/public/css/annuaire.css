@@ -115,7 +115,7 @@ body {
 .table-annuaire {
     border-collapse: collapse;
     width: 100%;
-    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Pour chaque <tr>, impair */
@@ -138,7 +138,7 @@ body {
     background-color: #f6f6f6;
 }
 
-.table-annuaire a{
+.table-annuaire a {
     text-decoration: none;
 }
 
@@ -150,9 +150,9 @@ body {
 }
 
 /* Boutons mouse hover */
-    .table-annuaire button:hover {
-        filter: opacity(.8);
-    }
+.table-annuaire button:hover {
+    filter: opacity(.8);
+}
 
 /* Icônes des boutons */
 .table-annuaire button img {
@@ -166,7 +166,7 @@ body {
     white-space: nowrap;
 }
 
-.button-add{
+.button-add {
     background-image: linear-gradient(120deg, #24bc16 0%, #1faa12 100%);
     border: none;
     border-radius: 4px;
@@ -176,7 +176,7 @@ body {
     font-weight: bold;
 }
 
-.button-add:hover{
+.button-add:hover {
     opacity: 0.7;
 }
 
@@ -209,16 +209,71 @@ body {
     box-shadow: 0 0 80px -20px;
     height: 75px;
     width: 100%;
-}
-
-.navbar div {
-    margin: 0px 10px;
+    display: inline-flex;
 }
 
 .navbar-logo {
+    margin: auto;
+    margin-left: 10px;
+}
+
+.logo {
     width: 150px;
-    height: auto;
-    margin: 8px 5px;
+}
+
+.logo-menu {
+    width: 25px;
+    height: 30px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.logo-menu:hover {
+    filter: drop-shadow(0px 0px 3px black);
+}
+
+.menu-main {
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-right: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 12vw;
+}
+
+.menu-button {
+    width: 100%;
+    border: none;
+    background-color: #3399FF;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+}
+
+.menu-main:hover .menu-child {
+    display: inline-grid;
+}
+
+.menu-child a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.menu-child a:hover {
+    background-color: #3399FF;
+}
+
+.menu-child {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #99caff;
 }
 
 .tab-block {
@@ -232,14 +287,14 @@ body {
     padding-top: 10px;
 }
 
-.lien-retour{
+.lien-retour {
     font-size: x-large;
     letter-spacing: 0.5px;
     margin: 2%;
 
 }
 
-.lien-retour:hover{
+.lien-retour:hover {
     color: #bf0f2d;
     opacity: 0.5;
 }
@@ -249,33 +304,33 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.table-user{
+.table-user {
     width: 100%;
-    border-collapse:collapse;
-    border-spacing:0;
-    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.table-user tr:nth-child(even){
-    background-color:#f1f1f1;
+.table-user tr:nth-child(even) {
+    background-color: #f1f1f1;
 }
 
-.table-user tr:nth-child(odd){
-    background-color:#fff;
+.table-user tr:nth-child(odd) {
+    background-color: #fff;
 }
 
-.table-user td{
+.table-user td {
     width: 50%;
     text-align: center;
     padding: 12px 20px;
     margin: 8px 0;
 }
 
-.table-btn{
+.table-btn {
     width: 100%;
 }
 
-.table-btn td{
+.table-btn td {
     width: 50%;
     text-align: center;
     padding: 12px 20px;
@@ -286,7 +341,18 @@ body {
     filter: opacity(.8);
 }
 
-.btn-modify-user{
+.btn-see-user{
+    width: 70%;
+    background-image: linear-gradient(120deg, #94baef 0%, #365684 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-modify-user {
     width: 70%;
     background-image: linear-gradient(120deg, #ffa444 0%, #fc983c 100%);
     border: none;
@@ -297,7 +363,7 @@ body {
     cursor: pointer;
 }
 
-.btn-delete-user{
+.btn-delete-user {
     width: 70%;
     background-image: linear-gradient(120deg, #dd8888 0%, #ff002a 100%);
     border: none;
@@ -308,7 +374,7 @@ body {
     cursor: pointer;
 }
 
-.form-modify{
+.form-modify {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 1%;
@@ -316,11 +382,13 @@ body {
     width: 40%;
 }
 
-.form-modify h1, .form-modify h2{
+.form-modify h1,
+.form-modify h2 {
     text-align: center;
 }
 
-.form-modify input[type=text], .form-modify input[type=number]{
+.form-modify input[type=text],
+.form-modify input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -340,7 +408,7 @@ body {
     box-sizing: border-box;
 }
 
-.form-modify input[type=submit]{
+.form-modify input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
     color: white;
@@ -351,7 +419,7 @@ body {
     cursor: pointer;
 }
 
-.btn-add-contrat{
+.btn-add-contrat {
     width: 70%;
     background-image: linear-gradient(120deg, #24bc16 0%, #1faa12 100%);
     border: none;
@@ -362,7 +430,7 @@ body {
     cursor: pointer;
 }
 
-.btn-modify-contrat{
+.btn-modify-contrat {
     width: 70%;
     background-image: linear-gradient(120deg, #ffa444 0%, #fc983c 100%);
     border: none;
@@ -373,7 +441,7 @@ body {
     cursor: pointer;
 }
 
-.btn-delete-contrat{
+.btn-delete-contrat {
     width: 70%;
     background-image: linear-gradient(120deg, #dd8888 0%, #ff002a 100%);
     border: none;
@@ -384,7 +452,7 @@ body {
     cursor: pointer;
 }
 
-#btnAccueil{
+#btnAccueil {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -392,12 +460,12 @@ body {
     margin: auto;
 }
 
-#btnAccueil>.btn-accueil{
+#btnAccueil>.btn-accueil {
     float: left;
     width: 160px;
 }
 
-#btnAccueil>.btn-accueil>.button-add{
+#btnAccueil>.btn-accueil>.button-add {
     width: 160px;
 }
 

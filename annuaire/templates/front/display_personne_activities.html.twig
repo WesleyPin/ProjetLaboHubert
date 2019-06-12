@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Activités de {{ user.firstname }}&nbsp;{{ user.lastname }}
+{% endblock %}
+
+{% block body %}
+    {{ dump(user) }}
+{{ dump(activities) }}
+{% endblock %}
