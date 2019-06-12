@@ -16,16 +16,15 @@
     </script>
 
     <div class="tab-block">
-        <h1>Bienvenue sur l'annuaire
-            {{ app.user.username }}</h1>
-        <div id="btnAccueil">
-            <a class="btn-accueil" href="{{ path('form_personne', { 'id': '-1' }) }}">
-                <button class="button-add" title="Ajouter">Ajouter une personne</button>
-            </a>
-            <a class="btn-accueil" href="{{ path('import-csv') }}">
-                <button class="button-add" title="Import CSV">Import CSV</button>
-            </a>
-        </div>
+        <h1>Bienvenue sur l'annuaire</h1>
+        {# <div id="btnAccueil">
+                            <a class="btn-accueil" href="{{ path('form_personne', { 'id': '-1' }) }}">
+                                <button class="button-add" title="Ajouter">Ajouter une personne</button>
+                            </a>
+                            <a class="btn-accueil" href="{{ path('import-csv') }}">
+                                <button class="button-add" title="Import CSV">Import CSV</button>
+                            </a>
+                        </div> #}
         <div class="annuaire-container">
             <table class="table-annuaire cell-border" id="annuaire">
                 <thead>
