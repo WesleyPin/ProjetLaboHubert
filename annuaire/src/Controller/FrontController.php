@@ -37,9 +37,8 @@ class FrontController extends AbstractController
      */
     public function seeUser($id)
     {
-        $user = $this->getDoctrine()->getRepository('App:Personne')->findOneBy(['id' => $id]);
+        $user = $this->getDoctrine()->getRepository('App:Personne')->find($id);
         $contrat = $this->getDoctrine()->getRepository('App:Contrat')->findOneBy(['personne' => $id]);
-        
         return $this->render('front/display_personne.html.twig', ['user' => $user, 'contrat' => $contrat]);
     }
 

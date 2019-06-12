@@ -121,28 +121,21 @@
                     Contrat
                 </td>
                 <td>
-                {% if contrat == null %}
-                    <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': '-1' }) }}">
-                        <button class="btn-add-contrat">Ajouter</button>
-                    </a>
-                {% else %}
-                    {# <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': contrat.id }) }}"> #}
-                        {# <button class="btn-modify-contrat">Modifier</button> #}
-                    {# </a> #}
-                    {# <a href="{{ path('delete_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}"> #}
-                        {# <button class="btn-delete-contrat">Supprimer</button> #}
-                    {# </a> #}
-                {% endif %}
-
-                <a href="{{ path('display_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
-                    <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
-                </a>
-                <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': contrat.id }) }}">
-                    <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
-                </a>
-                <a href="{{ path('delete_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
-                    <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
-                </a>
+                    {% if contrat %}
+                        <a href="{{ path('display_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
+                            <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
+                        </a>
+                        <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': contrat.id }) }}">
+                            <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
+                        </a>
+                        <a href="{{ path('delete_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
+                            <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
+                        </a>
+                    {% else %}
+                        <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': '-1' }) }}">
+                            <button class="btn-add-contrat" title="Modifier">Ajouter</button>
+                        </a>
+                    {% endif %}
                 </td>
             </tr>
         </table>

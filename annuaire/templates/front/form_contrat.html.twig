@@ -57,14 +57,14 @@
             $('#form_type').parent().css({'display': 'flex', 'flex-direction': 'column'});
 
             if($('#form_type').val() == 1){
-                $('#form_enddate').hide();
+                $('#form_enddate').parent().parent().hide();
             }
 
             $('#form_type').on('change', function(){
                 if($(this).val() == 1){
-                    $('#form_enddate').hide();
+                    $('#form_enddate').parent().parent().hide();
                 }else{
-                    $('#form_enddate').show();
+                    $('#form_enddate').parent().parent().show();
                 }
             });
 
