@@ -52,7 +52,12 @@
             {{ form_row(form_personne.departuredate, {'label': 'Date de départ'}) }}
         </div>
         <div>
-            <input type="submit" name="save" value="Sauvegarder"/>
+            {% if id != -1 %}
+                <input type="submit" name="save" value="Sauvegarder"/>
+            {% else %}
+                <input type="submit" name="save" value="Ajouter"/>
+            {% endif %}
+
         </div>
         {{ form_end(form_personne) }}
     </div>
@@ -61,6 +66,14 @@
         $(document).ready(function() {
             var InGeeps = $('#form_ingeeps');
             var DateInGeeps = $('.ingeeps');
+
+           var id = {{ id }};
+
+            if ( id === -1){
+                $('#form_birthdate_year').val("");
+                $('#form_birthdate_month').val("");
+                $('#form_birthdate_day').val("");
+            }
 
             if(InGeeps.prop('checked')){
                 DateInGeeps.show();
