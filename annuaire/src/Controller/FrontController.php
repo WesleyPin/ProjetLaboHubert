@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Compte;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -109,4 +110,43 @@ class FrontController extends AbstractController
 
         return $this->render('front/form_user.html.twig', ['form_personne' => $form_personne->createView()]);
     }
+
+    /**
+     * @Route("/import-csv", name="import")
+     */
+    public function import(Request $request)
+    {
+        $n=0;
+        $em = $this->getDoctrine()->getManager();
+        if ($request->isMethod('post')) {
+           foreach ($request->files as $filename){
+               $path = $filename->getPathName();
+                $file = fopen("$path", "r");
+
+                while (($column = fgetcsv($file, 1024, ";")) !== FALSE) {
+
+                    if ($n > 0)
+                    {
+                        $compte = new Compte();
+                        $compte->setPassword('azerty');
+                        $em->persist($compte);
+                        $em->flush();
+                        $personne = new Personne();
+                        $dateBirth = new \DateTime($column[3]);
+                        $dateArriv = new \DateTime($column[12]);
+                        $dateDepart = new \DateTime($column[13]);
+                        $personne->setFirstname($column[1])->setLastname($column[2])->setBirthdate($dateBirth)->setPlacebirth($column[4])->setHomephone($column[5])->setMobilephone($column[6])->setMail($column[7])->setOffice($column[8])->setBuilding($column[9])->setTutelle($column[10])->setIngeeps($column[11])->setArrivaldate($dateArriv)->setDeparturedate($dateDepart)->setCompte($compte);
+                        $em->persist($personne);
+                        $em->flush();
+                    }
+                    $n+=1;
+
+                }
+
+            }
+        }
+
+        return $this->render('front/import.html.twig');
+    }
+
 }
