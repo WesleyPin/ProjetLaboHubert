@@ -138,6 +138,16 @@
                     {% endif %}
                 </td>
             </tr>
+            <tr>
+                <td>
+                    Activités
+                </td>
+                <td>
+                    <a href="{{ path('display_personne_activities', { 'id': user.id }) }}">
+                        <button class="btn-see-user">Voir</button>
+                    </a>
+                </td>
+            </tr>
         </table>
         <table class="table-btn" style="width: 100%; text-align:center;">
             <tr>

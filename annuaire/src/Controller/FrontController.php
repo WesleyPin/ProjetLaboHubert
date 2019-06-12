@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 use App\Entity\Personne;
 use App\Entity\Contrat;
+use App\Entity\Activite;
 
 /**
  * @isGranted("ROLE_USER")
@@ -242,4 +243,82 @@ class FrontController extends AbstractController
         return $this->render('front/import.html.twig');
     }
 
+    /**
+     * @Route("/manage_activities", name="manage_activities")
+     * @return mixed
+     */
+    public function manage_activities()
+    {
+        $activities = $this->getDoctrine()->getRepository('App:Activite')->findall();
+
+        return $this->render('front/manage_activities.html.twig', ['activities' => $activities]);
+    }
+
+    /**
+     * @Route("/display_activity/{id}", name="display_activity")
+     * @param $id
+     * @return mixed
+     */
+    public function seeActivity($id)
+    {
+        $activity = $this->getDoctrine()->getRepository('App:Activite')->find($id);
+        return $this->render('front/display_activity.html.twig', ['activity' => $activity]);
+    }
+
+    /**
+     * @Route("/form_activity/{id}", name="form_activity")
+     * @param Request $request
+     * @param ObjectManager $om
+     * @param $id
+     * @return mixed
+     */
+    public function formActivity(Request $request, ObjectManager $om, $id)
+    {
+        if($id == -1)   // Ajout
+        {
+            $activity = new Activite();
+        }
+        elseif($id != -1)   // modif
+        {
+            $activity = $this->getDoctrine()->getRepository('App:Activite')->findOneBy(['id' => $id]);
+        }
+
+        $form_activity = "yo"; // A FAIRE -------------------------------------------------------------> Voir formUser()
+
+        return $this->render('front/form_user.html.twig', ['form_personne' => $form_activity->createView(), 'id' => $id]);
+    }
+
+    /**
+     * @Route("/delete_activity/{id}", name="delete_activity")
+     */
+    public function delActivity($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $activity = $em->getRepository('App:Activite')->find($id);
+        $workon = $em->getRepository('App:Workon')->findBy(array('activite' => $id));
+        foreach ($workon as $work) {
+            $em->remove($work);
+        }
+        $em->remove($activity);
+        $em->flush();
+
+        return new RedirectResponse($this->generateUrl('manage_activities'));
+    }
+
+    /**
+     * @Route("/display_personne_activities/{id}", name="display_personne_activities")
+     * @param $id
+     * @return mixed
+     */
+    public function seePersonneActivities($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $user = $em->getRepository('App:Personne')->find($id);
+        $workon = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
+        $activities = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
+
+        //A terminer
+
+        return $this->render('front/display_personne_activities.html.twig', ['workon' => $workon, 'activities' => $activities, 'user' => $user]);
+    }
 }
