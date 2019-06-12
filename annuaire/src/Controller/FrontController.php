@@ -191,6 +191,7 @@ class FrontController extends AbstractController
         return $this->redirectToRoute('display_personne', ['id' => $id]);
      }
 
+    /**
      * @Route("/import-csv", name="import")
      */
     public function import(Request $request)
