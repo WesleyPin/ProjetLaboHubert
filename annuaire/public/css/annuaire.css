@@ -383,3 +383,20 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+
+#btnAccueil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    margin: auto;
+}
+
+#btnAccueil>.btn-accueil{
+    float: left;
+    width: 160px;
+}
+
+#btnAccueil>.btn-accueil>.button-add{
+    width: 160px;
+}

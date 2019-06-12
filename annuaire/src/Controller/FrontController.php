@@ -192,7 +192,7 @@ class FrontController extends AbstractController
      }
 
     /**
-     * @Route("/import-csv", name="import")
+     * @Route("/import-csv", name="import-csv")
      */
     public function import(Request $request)
     {
