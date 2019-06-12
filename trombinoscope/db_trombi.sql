@@ -229,6 +229,16 @@ CREATE TABLE `typeofcontrat` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Déchargement des données de la table `typeofcontrat`
+--
+
+INSERT INTO `typeofcontrat` (`id`, `name`) VALUES
+(1, 'CDI'),
+(2, 'CDD'),
+(3, 'Alternance'),
+(4, 'Stage');
+
 -- --------------------------------------------------------
 
 --

@@ -18,6 +18,7 @@
 
 body {
     margin: 0;
+    font-family: Calibri, Verdana, "Trebuchet MS", sans-serif;
 }
 
 .titre {
@@ -114,25 +115,7 @@ body {
 .table-annuaire {
     border-collapse: collapse;
     width: 100%;
-    padding-top: 10px;
-}
-
-.table-annuaire thead {
-    background-color: #6282af;
-}
-
-.table-annuaire thead th {
-    color: white;
-    border: 1px solid white;
-    padding: 15px;
-}
-
-.table-annuaire thead th:first-child {
-    border-top-left-radius: 20px;
-}
-
-.table-annuaire thead th:last-child {
-    border-top-right-radius: 20px;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
 }
 
 /* Pour chaque <tr>, impair */
@@ -155,6 +138,10 @@ body {
     background-color: #f6f6f6;
 }
 
+.table-annuaire a{
+    text-decoration: none;
+}
+
 /* Boutons dans le tableau annuaire */
 .table-annuaire button {
     border-radius: 5px;
@@ -163,9 +150,9 @@ body {
 }
 
 /* Boutons mouse hover */
-.table-annuaire button:hover {
-    filter: opacity(.8);
-}
+    .table-annuaire button:hover {
+        filter: opacity(.8);
+    }
 
 /* Icônes des boutons */
 .table-annuaire button img {
@@ -180,11 +167,13 @@ body {
 }
 
 .button-add{
-    background-image: linear-gradient(120deg, #258c30 0%, #83f790 100%);
-    border: 1px solid green;
+    background-image: linear-gradient(120deg, #24bc16 0%, #1faa12 100%);
+    border: none;
     border-radius: 4px;
     padding: 8px 10px;
     cursor: pointer;
+    color: white;
+    font-weight: bold;
 }
 
 .button-add:hover{
@@ -233,9 +222,14 @@ body {
 }
 
 .tab-block {
-    width: 50%;
+    width: 80%;
     margin: auto;
     text-align: center;
+    margin-bottom: 2%;
+}
+
+.annuaire-container {
+    padding-top: 10px;
 }
 
 .lien-retour{
@@ -255,6 +249,65 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.table-user{
+    width: 100%;
+    border-collapse:collapse;
+    border-spacing:0;
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.table-user tr:nth-child(even){
+    background-color:#f1f1f1;
+}
+
+.table-user tr:nth-child(odd){
+    background-color:#fff;
+}
+
+.table-user td{
+    width: 50%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.table-btn{
+    width: 100%;
+}
+
+.table-btn td{
+    width: 50%;
+    text-align: center;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.table-btn button:hover {
+    filter: opacity(.8);
+}
+
+.btn-modify-user{
+    width: 70%;
+    background-image: linear-gradient(120deg, #ffa444 0%, #fc983c 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete-user{
+    width: 70%;
+    background-image: linear-gradient(120deg, #dd8888 0%, #ff002a 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .form-modify{
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -263,7 +316,7 @@ body {
     width: 40%;
 }
 
-.form-modify h1{
+.form-modify h1, .form-modify h2{
     text-align: center;
 }
 
@@ -296,4 +349,74 @@ body {
     border: 1px solid darkgreen;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.btn-add-contrat{
+    width: 70%;
+    background-image: linear-gradient(120deg, #24bc16 0%, #1faa12 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-modify-contrat{
+    width: 70%;
+    background-image: linear-gradient(120deg, #ffa444 0%, #fc983c 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-delete-contrat{
+    width: 70%;
+    background-image: linear-gradient(120deg, #dd8888 0%, #ff002a 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btnAccueil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    margin: auto;
+}
+
+#btnAccueil>.btn-accueil{
+    float: left;
+    width: 160px;
+}
+
+#btnAccueil>.btn-accueil>.button-add{
+    width: 160px;
+}
+
+.table-user button {
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.table-user button:hover {
+    filter: opacity(.8);
+}
+
+.table-user button img {
+    padding: 4px 0 1px 0;
+    width: 14px;
+    height: 14px;
+}
+
+.table-user a {
+    text-decoration: none;
 }
