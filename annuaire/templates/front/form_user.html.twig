@@ -11,7 +11,14 @@
 
     <div class="form-modify">
         {{ form_start(form_personne,  {'attr': {'class': 'classTest'}}) }}
-        <h1>Ajout/Modification</h1>
+
+        {% if id != -1 %}
+            <h1>Modification</h1>
+        {% else %}
+            <h1>Ajout d'une personne</h1>
+        {% endif %}
+
+
         <div class="input-text">
             {{ form_row(form_personne.firstname, {'label': 'Prénom'}) }}
         </div>
