@@ -115,6 +115,20 @@ class FrontController extends AbstractController
     }
 
     /**
+     * @Route("/display_contrat/{id_contrat}/{id}", name="display_contrat")
+     * @param $id_contrat
+     * @param $id
+     * @return mixed
+     */
+     public function seeContrat($id_contrat, $id)
+     {
+         $contrat = $this->getDoctrine()->getRepository('App:Contrat')->find($id_contrat);
+         $user = $this->getDoctrine()->getRepository('App:Personne')->find($id);
+         $type_contrat = $this->getDoctrine()->getRepository('App:Typeofcontrat')->find($contrat->getType($id_contrat));
+         return $this->render('front/display_contrat.html.twig', ['contrat' => $contrat, 'user' => $user, 'type' => $type_contrat]);
+     }
+
+    /**
      * @Route("/form_contrat/{id}/{id_contrat}", name="form_contrat")
      * @param Request $request
      * @param ObjectManager $om
@@ -160,10 +174,6 @@ class FrontController extends AbstractController
 
         if($form_contrat->isSubmitted() && $form_contrat->isValid())
         {
-            // echo '<pre>';
-            // print_r($contrat);
-            // echo '</pre>';
-            // die();
             $contrat->setPersonne($user);
             $om->persist($contrat);
             $om->flush();
@@ -193,6 +203,8 @@ class FrontController extends AbstractController
 
     /**
      * @Route("/import-csv", name="import-csv")
+     * @param Request $request
+     * @return mixed
      */
     public function import(Request $request)
     {
@@ -202,9 +214,7 @@ class FrontController extends AbstractController
            foreach ($request->files as $filename){
                $path = $filename->getPathName();
                 $file = fopen("$path", "r");
-
                 while (($column = fgetcsv($file, 1024, ";")) !== FALSE) {
-
                     if ($n > 0)
                     {
                         $compte = new Compte();
@@ -220,12 +230,9 @@ class FrontController extends AbstractController
                         $em->flush();
                     }
                     $n+=1;
-
                 }
-
             }
         }
-
         return $this->render('front/import.html.twig');
     }
 

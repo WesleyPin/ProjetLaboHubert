@@ -150,9 +150,9 @@ body {
 }
 
 /* Boutons mouse hover */
-.table-annuaire button:hover {
-    filter: opacity(.8);
-}
+    .table-annuaire button:hover {
+        filter: opacity(.8);
+    }
 
 /* Icônes des boutons */
 .table-annuaire button img {
@@ -399,4 +399,24 @@ body {
 
 #btnAccueil>.btn-accueil>.button-add{
     width: 160px;
+}
+
+.table-user button {
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.table-user button:hover {
+    filter: opacity(.8);
+}
+
+.table-user button img {
+    padding: 4px 0 1px 0;
+    width: 14px;
+    height: 14px;
+}
+
+.table-user a {
+    text-decoration: none;
 }
