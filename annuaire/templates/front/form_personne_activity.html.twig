@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Ajout d'activité pour {{ user.firstname }}&nbsp;{{ user.lastname }}
+{% endblock %}
+
+{% block body %}
+    {{ dump(user) }}
+    {{ dump(activites)}}
+
+    <div>
+        <a class="lien-retour" href="{{ path("annuaire") }}">Retour</a>
+    </div>
+    <div class="form-modify">
+        <h1> Ajout d'activité pour {{ user.firstname }}&nbsp;{{ user.lastname }}</h1>
+
+        <div class="form-modify">
+            {{ form_start(form_personne_activity) }}
+
+
+            <div class="input-text ingeeps">
+                {{ form_row(form_personne_activity.activite, {'label': 'Liste des activités'}) }}
+            </div>
+
+            <div>
+                <input type="submit" name="save" value="Ajouter"/>
+
+            </div>
+            {{ form_end(form_personne_activity) }}
+        </div>
+    </div>
+{% endblock %}
