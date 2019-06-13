@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\ColorType;
 
 use App\Entity\Personne;
 use App\Entity\Contrat;
@@ -288,7 +289,26 @@ class FrontController extends AbstractController
 
         $form_activity = "yo"; // A FAIRE -------------------------------------------------------------> Voir formUser()
 
-        return $this->render('front/form_user.html.twig', ['form_activity' => $form_activity->createView(), 'id' => $id]);
+
+        // Création du formulaire
+        $form_activity = $this->createFormBuilder($activity)
+            ->add('label')
+            ->add('typeof')
+            ->add('color',  ColorType::class)
+            ->add('description')
+            ->getForm();
+
+        $form_activity->handleRequest($request);
+
+        if($form_activity->isSubmitted() && $form_activity->isValid())
+        {
+            $om->persist($activity);
+            $om->flush();
+
+            return $this->redirectToRoute('manage_activities');
+        }
+
+        return $this->render('front/form_activity.html.twig', ['form_activity' => $form_activity->createView(), 'id' => $id]);
     }
 
     /**
