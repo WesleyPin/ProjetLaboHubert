@@ -28,7 +28,7 @@ class Personne
     /**
      * @ORM\Column(type="string", length=20, nullable=false)
      * @Assert\Regex(
-     *     pattern="/^[A-Za-zéèêë\-]+$/"
+     *     pattern="/^[A-Za-zéèêë\-\s]+$/"
      * )
      */
     private $lastname;
@@ -40,7 +40,7 @@ class Personne
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Regex("/^[A-Z][A-Za-zéèêë\-]+$/")
+     * @Assert\Regex("/^[A-Z][A-Za-zéèêë\-\s]+$/")
      */
     private $placebirth;
 

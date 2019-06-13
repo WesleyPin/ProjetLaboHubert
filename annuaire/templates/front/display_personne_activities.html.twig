@@ -6,7 +6,7 @@
 {% block body %}
 
     <div>
-        <a class="lien-retour" href="{{ path("annuaire") }}">Retour</a>
+        <a class="lien-retour" href="{{ path("display_personne", {'id': user.id}) }}">Retour</a>
     </div>
     <div class="form-modify">
         <h1> Liste des activités de {{ user.firstname }}&nbsp;{{ user.lastname }}</h1>
