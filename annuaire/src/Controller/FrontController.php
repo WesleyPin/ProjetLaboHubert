@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Compte;
+use App\Entity\Workon;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -286,7 +287,7 @@ class FrontController extends AbstractController
 
         $form_activity = "yo"; // A FAIRE -------------------------------------------------------------> Voir formUser()
 
-        return $this->render('front/form_user.html.twig', ['form_personne' => $form_activity->createView(), 'id' => $id]);
+        return $this->render('front/form_user.html.twig', ['form_activity' => $form_activity->createView(), 'id' => $id]);
     }
 
     /**
@@ -321,6 +322,37 @@ class FrontController extends AbstractController
         //A terminer
 
         return $this->render('front/display_personne_activities.html.twig', ['workon' => $workon, 'user' => $user]);
+    }
+
+    /**
+     * @Route("/form_personne_activity/{id}", name="form_personne_activity")
+     * @param Request $request
+     * @param ObjectManager $om
+     * @return mixed
+     */
+    public function formPersonneActivity(Request $request, ObjectManager $om, $id)
+    {
+        $workon = new Workon();
+
+        $form_personne_activity = "yo"; // A FAIRE ----------------------------------------------------> Voir formUser()
+
+        return $this->render('front/form_personne_activity.html.twig', ['form_personne_activity' => $form_personne_activity->createView()]);
+    }
+
+    /**
+     * @Route("/delete_personne_activity/{id}/{id_activite}", name="delete_personne_activity")
+     * @param $id
+     * @param $id_activite
+     * @return mixed
+     */
+    public function delPersonneActivity($id, $id_activite)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $workon = $em->getRepository('App:Workon')->find($id_activite);
+        $em->remove($workon);
+        $em->flush();
+
+        return $this->redirectToRoute('display_personne_activities', ['id' => $id]);
     }
 
     /**
