@@ -316,11 +316,11 @@ class FrontController extends AbstractController
         $em = $this->getDoctrine()->getEntityManager();
         $user = $em->getRepository('App:Personne')->find($id);
         $workon = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
-        $activities = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
+
 
         //A terminer
 
-        return $this->render('front/display_personne_activities.html.twig', ['workon' => $workon, 'activities' => $activities, 'user' => $user]);
+        return $this->render('front/display_personne_activities.html.twig', ['workon' => $workon, 'user' => $user]);
     }
 
     /**

@@ -419,6 +419,17 @@ body {
     cursor: pointer;
 }
 
+.btn-add-activite {
+    width: 100%;
+    background-image: linear-gradient(120deg, #24bc16 0%, #1faa12 100%);
+    border: none;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .btn-add-contrat {
     width: 70%;
     background-image: linear-gradient(120deg, #24bc16 0%, #1faa12 100%);
