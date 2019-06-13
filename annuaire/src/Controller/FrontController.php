@@ -332,11 +332,27 @@ class FrontController extends AbstractController
      */
     public function formPersonneActivity(Request $request, ObjectManager $om, $id)
     {
+
+        $em = $this->getDoctrine()->getEntityManager();
+        $user = $em->getRepository('App:Personne')->find($id);
+        $activites = $em->getRepository('App:Activite')->findAll();
         $workon = new Workon();
 
-        $form_personne_activity = "yo"; // A FAIRE ----------------------------------------------------> Voir formUser()
+        $form_personne_activity = $this->createFormBuilder($workon)
+            ->add('activite')
+            ->getForm();
 
-        return $this->render('front/form_personne_activity.html.twig', ['form_personne_activity' => $form_personne_activity->createView()]);
+        $form_personne_activity->handleRequest($request);
+
+        if($form_personne_activity->isSubmitted() && $form_personne_activity->isValid())
+        {
+            $om->persist($workon);
+            $om->flush();
+
+            return $this->redirectToRoute('display_personne_activities', ['id' => $id]);
+        }
+
+        return $this->render('front/form_personne_activity.html.twig', ['form_personne_activity' => $form_personne_activity->createView(), 'activites' => $activites, 'user' => $user]);
     }
 
     /**

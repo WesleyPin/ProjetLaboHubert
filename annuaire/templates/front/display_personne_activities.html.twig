@@ -11,7 +11,7 @@
     <div class="form-modify">
         <h1> Liste des activités de {{ user.firstname }}&nbsp;{{ user.lastname }}</h1>
 
-        <a href="{{ path('form_compte', { 'id': user.id, 'id_compte': '-1' }) }}">
+        <a href="{{ path('form_personne_activity', { 'id': user.id}) }}">
             <button class="btn-add-activite" title="Modifier">Ajouter</button>
         </a>
 
