@@ -147,10 +147,7 @@
                 <td>
                     {% if compte %}
                         <a href="{{ path('display_compte', { 'id_compte': compte.id, 'id': user.id }) }}">
-                            <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
-                        </a>
-                        <a href="{{ path('form_compte', { 'id': user.id, 'id_compte': compte.id }) }}">
-                            <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
+                            <button class="btn-see-user" title="Voir">Voir</button>
                         </a>
                     {% else %}
                         <a href="{{ path('form_compte', { 'id': user.id, 'id_compte': '-1' }) }}">
