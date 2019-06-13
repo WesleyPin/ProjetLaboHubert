@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 use App\Entity\Personne;
 use App\Entity\Contrat;
@@ -338,14 +339,26 @@ class FrontController extends AbstractController
         $activites = $em->getRepository('App:Activite')->findAll();
         $workon = new Workon();
 
+        $select_activities = [];
+
+        foreach($activites as $activity)
+        {
+            $id_activite = $activity->getId();
+            $label_activite = $activity->getLabel();
+            $select_activities[$label_activite] = $activity;
+        }
+
         $form_personne_activity = $this->createFormBuilder($workon)
-            ->add('activite')
+            ->add('activite', ChoiceType::class, [
+                'choices'  => $select_activities,
+            ])
             ->getForm();
 
         $form_personne_activity->handleRequest($request);
 
         if($form_personne_activity->isSubmitted() && $form_personne_activity->isValid())
         {
+            $workon->setPersonne($user);
             $om->persist($workon);
             $om->flush();
 
