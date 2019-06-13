@@ -4,6 +4,9 @@
 
 {% block body %}
 	<main id="main">
+		<div class="position-help">
+			<button class="btn" data-toggle="modal" data-target="#modal_help">Schéma Geeps</button>
+		</div>
 		<h1>Bienvenue au GeePs</h1>
 
 		<div id="container_btn_back">
@@ -23,12 +26,15 @@
 		</div>
 	</main>
 
-	{% include 'Modals/modal_trombi.html.twig' %}
+    {% include 'Modals/modal_trombi.html.twig' %}
+    {% include 'Modals/modal_help.html.twig' %}
 	{% include 'Modals/modal_search.html.twig' %}
+    {% include 'Modals/modal_info.html.twig' %}
 
 {% endblock %}
 
 {% block scripts %}
+
 	<script src="{{ asset('js/function.js') }}"></script>
 	<script>
 		var cpt = 1;
