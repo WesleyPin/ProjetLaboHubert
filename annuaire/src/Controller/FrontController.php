@@ -189,7 +189,7 @@ class FrontController extends AbstractController
             }
         }
 
-        return $this->render('front/form_contrat.html.twig', ['form_contrat' => $form_contrat->createView(), 'user' => $user]);
+        return $this->render('front/form_contrat.html.twig', ['form_contrat' => $form_contrat->createView(), 'user' => $user, 'id_contrat' => $id_contrat]);
     }
 
     /**
