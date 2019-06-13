@@ -5,7 +5,7 @@
     <div class="menu-main">
         <button class="menu-button">Administration</button>
         <div class="menu-child">
-            <a href="{{ path('form_personne', { 'id': '-1' }) }}">Ajouter une personne</a>
+            <a class="btn-accueil" href="{{ path('manage_activities') }}">Gérer les activités</a>
             <a href="{{ path('import-csv') }}">Import CSV</a>
         </div>
         <span>{{ app.user.username }}</span>

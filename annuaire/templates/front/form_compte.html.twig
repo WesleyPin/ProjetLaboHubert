@@ -14,13 +14,16 @@
     <h2>{{ user.firstname }}
         {{ user.lastname }}</h2>
     <div class="input-text">
-        {{ form_row(form_contrat.personne) }}
+        {{ form_row(form_compte.login, {'value': user.mail}) }}
     </div>
     <div class="input-text">
-        {{ form_row(form_compte.login) }}
+        {{ form_row(form_compte.password) }}
     </div>
     <div class="input-text">
         {{ form_row(form_compte.role, {'label': 'Rôle'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_compte.home_directory, {'label': 'Home Directory'}) }}
     </div>
     <div class="input-text">
         {{ form_row(form_compte.startdate, {'label': 'Début d\'activation'}) }}

@@ -361,13 +361,14 @@ class FrontController extends AbstractController
         // Création du formulaire
         $form_compte = $this->createFormBuilder($compte)
             ->add('login')
+            ->add('password')
             ->add('home_directory')
             ->add('role')
             ->add('startdate', DateType::class, [
-                'years' => range(date('Y') -90, date('Y') -15)
+                'years' => range(date('Y') -10, date('Y') -15)
             ])
             ->add('enddate', DateType::class, [
-                'years' => range(date('Y') -90, date('Y') -15)
+                'years' => range(date('Y') +10, date('Y') -15)
             ])
             ->getForm();
 
@@ -385,20 +386,22 @@ class FrontController extends AbstractController
     }
 
         /**
-     * @Route("/delete_compte/{id_compte}/{id}", name="delete_compte")
+     * @Route("/active_compte/{id_compte}/{id}", name="active_compte")
      * @param Request $request
      * @param ObjectManager $om
      * @param $id_contrat
      * @param $id
      * @return mixed
      */
-    public function delCompte(Request $request, ObjectManager $om, $id_compte, $id)
+    public function activeCompte(Request $request, ObjectManager $om, $id_compte, $id)
     {
        $em = $this->getDoctrine()->getEntityManager();
        $compte = $em->getRepository('App:Compte')->find($id_compte);
-       $personne = $em->getRepository('App:Personne')->findOneBy(['compte' => $id_compte]);
-       $personne->setCompte(null);
-       $em->remove($compte);
+       if ($compte->getActif()) {
+        $compte->setActif(false);
+       } else {
+        $compte->setActif(true);
+       }
        $em->flush();
        return $this->redirectToRoute('display_personne', ['id' => $id]);
     }

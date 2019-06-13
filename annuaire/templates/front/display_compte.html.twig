@@ -42,7 +42,7 @@
                 </td>
                 <td>
                     {% if compte.startdate != null %}
-                        {{ compte.startdate }}
+                        {{ compte.startdate|date('d/m/Y') }}
                     {% else %}
                         Non défini
                     {% endif %}
@@ -54,7 +54,7 @@
                 </td>
                 <td>
                     {% if compte.enddate != null %}
-                        {{ compte.enddate }}
+                        {{ compte.enddate|date('d/m/Y') }}
                     {% else %}
                         Non défini
                     {% endif %}
@@ -68,7 +68,7 @@
                     {% if compte.actif %}
                         Oui
                     {% else %}
-                        None
+                        Non
                     {% endif %}
                 </td>
             </tr>
@@ -81,9 +81,17 @@
                     </a>
                 </td>
                 <td>
-                    <a href="{{ path('delete_compte', { 'id_compte': compte.id, 'id': user.id }) }}">
-                        <button class="btn-delete-user">Supprimer</button>
-                    </a>
+                    {% if compte.actif %}
+                        <a href="{{ path('active_compte', { 'id_compte': compte.id, 'id': user.id }) }}">
+                            <button class="btn-delete-user">Désactiver</button>
+                        </a>
+                    {% else %}
+                        <a href="{{ path('active_compte', { 'id_compte': compte.id, 'id': user.id }) }}">
+                            <button class="btn-add-contrat">Activer</button>
+                        </a>
+                    {% endif %}
+
+
                 </td>
             </tr>
         </table>

@@ -152,9 +152,6 @@
                         <a href="{{ path('form_compte', { 'id': user.id, 'id_compte': compte.id }) }}">
                             <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
                         </a>
-                        <a href="{{ path('delete_compte', { 'id_compte': compte.id, 'id': user.id }) }}">
-                            <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
-                        </a>
                     {% else %}
                         <a href="{{ path('form_compte', { 'id': user.id, 'id_compte': '-1' }) }}">
                             <button class="btn-add-contrat" title="Modifier">Ajouter</button>
