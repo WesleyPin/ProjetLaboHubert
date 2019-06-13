@@ -341,9 +341,10 @@ class FrontController extends AbstractController
 
         $select_activities = [];
 
+        /* Pour chaque activité on crée le tableau que l'on va passer
+           en argument à 'choices' pour le select */
         foreach($activites as $activity)
         {
-            $id_activite = $activity->getId();
             $label_activite = $activity->getLabel();
             $select_activities[$label_activite] = $activity;
         }
