@@ -52,6 +52,21 @@ class Personne
     private $mail;
 
     /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $mailGeeps;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $civilite;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $img;
+
+    /**
      * @ORM\Column(type="integer", nullable=true)
      */
     private $office;
@@ -277,6 +292,37 @@ class Personne
     {
         $this->compte = $compte;
     }
+
+    public function getMailGeeps()
+    {
+        return $this->mailGeeps;
+    }
+
+    public function setMailGeeps($mailGeeps)
+    {
+        $this->mailGeeps = $mailGeeps;
+    }
+
+    public function getCivilite()
+    {
+        return $this->civilite;
+    }
+
+    public function setCivilite($civilite)
+    {
+        $this->civilité = $civilite;
+    }
+
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    public function setImg($img)
+    {
+        $this->img = $img;
+    }
+
 
 
 }
