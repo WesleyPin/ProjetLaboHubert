@@ -17,4 +17,7 @@ $(document).ready(function () {
     $("#submitCo").mouseout(function () {
         $("#submitCo").css("background-color", "rgba(51, 153, 255, 1)");
     })
+    $("#menu").click(function () {
+        console.log('test');
+    })
 })

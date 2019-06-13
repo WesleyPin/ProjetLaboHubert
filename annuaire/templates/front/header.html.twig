@@ -1,5 +1,13 @@
 <header class="navbar">
-    <div>
-        <img class="navbar-logo" src="{{ asset('img/logo-geeps.png') }}">
+    <div class="navbar-logo">
+        <a href="{{ path('annuaire') }}"><img class="logo" src="{{ asset('img/logo-geeps.png') }}"></a>
+    </div>
+    <div class="menu-main">
+        <button class="menu-button">Administration</button>
+        <div class="menu-child">
+            <a class="btn-accueil" href="{{ path('manage_activities') }}">Gérer les activités</a>
+            <a href="{{ path('import-csv') }}">Import CSV</a>
+        </div>
+        <span>{{ app.user.username }}</span>
     </div>
 </header>

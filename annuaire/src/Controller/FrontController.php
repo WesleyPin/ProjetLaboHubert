@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 
 use App\Entity\Personne;
 use App\Entity\Contrat;
+use App\Entity\Activite;
 
 /**
  * @isGranted("ROLE_USER")
@@ -39,7 +40,8 @@ class FrontController extends AbstractController
     {
         $user = $this->getDoctrine()->getRepository('App:Personne')->find($id);
         $contrat = $this->getDoctrine()->getRepository('App:Contrat')->findOneBy(['personne' => $id]);
-        return $this->render('front/display_personne.html.twig', ['user' => $user, 'contrat' => $contrat]);
+        $compte = $this->getDoctrine()->getRepository('App:Compte')->findOneBy(['id' => $user->getCompte()]);
+        return $this->render('front/display_personne.html.twig', ['user' => $user, 'contrat' => $contrat, 'compte' => $compte]);
     }
 
     /**
@@ -242,4 +244,165 @@ class FrontController extends AbstractController
         return $this->render('front/import.html.twig');
     }
 
+    /**
+     * @Route("/manage_activities", name="manage_activities")
+     * @return mixed
+     */
+    public function manage_activities()
+    {
+        $activities = $this->getDoctrine()->getRepository('App:Activite')->findall();
+
+        return $this->render('front/manage_activities.html.twig', ['activities' => $activities]);
+    }
+
+    /**
+     * @Route("/display_activity/{id}", name="display_activity")
+     * @param $id
+     * @return mixed
+     */
+    public function seeActivity($id)
+    {
+        $activity = $this->getDoctrine()->getRepository('App:Activite')->find($id);
+        return $this->render('front/display_activity.html.twig', ['activity' => $activity]);
+    }
+
+    /**
+     * @Route("/form_activity/{id}", name="form_activity")
+     * @param Request $request
+     * @param ObjectManager $om
+     * @param $id
+     * @return mixed
+     */
+    public function formActivity(Request $request, ObjectManager $om, $id)
+    {
+        if($id == -1)   // Ajout
+        {
+            $activity = new Activite();
+        }
+        elseif($id != -1)   // modif
+        {
+            $activity = $this->getDoctrine()->getRepository('App:Activite')->findOneBy(['id' => $id]);
+        }
+
+        $form_activity = "yo"; // A FAIRE -------------------------------------------------------------> Voir formUser()
+
+        return $this->render('front/form_user.html.twig', ['form_personne' => $form_activity->createView(), 'id' => $id]);
+    }
+
+    /**
+     * @Route("/delete_activity/{id}", name="delete_activity")
+     */
+    public function delActivity($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $activity = $em->getRepository('App:Activite')->find($id);
+        $workon = $em->getRepository('App:Workon')->findBy(array('activite' => $id));
+        foreach ($workon as $work) {
+            $em->remove($work);
+        }
+        $em->remove($activity);
+        $em->flush();
+
+        return new RedirectResponse($this->generateUrl('manage_activities'));
+    }
+
+    /**
+     * @Route("/display_personne_activities/{id}", name="display_personne_activities")
+     * @param $id
+     * @return mixed
+     */
+    public function seePersonneActivities($id)
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $user = $em->getRepository('App:Personne')->find($id);
+        $workon = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
+        $activities = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
+
+        //A terminer
+
+        return $this->render('front/display_personne_activities.html.twig', ['workon' => $workon, 'activities' => $activities, 'user' => $user]);
+    }
+
+    /**
+     * @Route("/display_compte/{id_compte}/{id}", name="display_compte")
+     * @param $id_compte
+     * @param $id
+     * @return mixed
+     */
+    public function seeCompte($id_compte, $id)
+    {
+        $compte = $this->getDoctrine()->getRepository('App:Compte')->find($id_compte);
+        $user = $this->getDoctrine()->getRepository('App:Personne')->find($id);
+        $role = $this->getDoctrine()->getRepository('App:Role')->find($compte->getRole());
+        return $this->render('front/display_compte.html.twig', [ 'user'=>$user, 'compte'=>$compte, 'role'=>$role]);
+    }
+
+        /**
+     * @Route("/form_compte/{id}/{id_compte}", name="form_compte")
+     * @param Request $request
+     * @param ObjectManager $om
+     * @param $id
+     * @param $id_compte
+     * @return mixed
+     */
+    public function formCompte(Request $request, ObjectManager $om, $id, $id_compte)
+    {
+        if($id_compte == -1)   // Ajout
+        {
+            $compte = new Compte();
+        }
+        elseif($id_compte != -1)   // modif
+        {
+            $compte = $this->getDoctrine()->getRepository('App:Compte')->findOneBy(['id' => $id_compte]);
+        }
+
+        $user = $this->getDoctrine()->getRepository('App:Personne')->find($id);
+
+        // Création du formulaire
+        $form_compte = $this->createFormBuilder($compte)
+            ->add('login')
+            ->add('password')
+            ->add('home_directory')
+            ->add('role')
+            ->add('startdate', DateType::class, [
+                'years' => range(date('Y') -10, date('Y') -15)
+            ])
+            ->add('enddate', DateType::class, [
+                'years' => range(date('Y') +10, date('Y') -15)
+            ])
+            ->getForm();
+
+        $form_compte->handleRequest($request);
+
+        if($form_compte->isSubmitted() && $form_compte->isValid())
+        {
+            $user->setCompte($compte);
+            $om->persist($compte);
+            $om->flush();
+
+            return $this->redirectToRoute('display_personne', ['id' => $id]);
+        }
+        return $this->render('front/form_compte.html.twig', ['form_compte' => $form_compte->createView(), 'user' => $user]);
+    }
+
+        /**
+     * @Route("/active_compte/{id_compte}/{id}", name="active_compte")
+     * @param Request $request
+     * @param ObjectManager $om
+     * @param $id_contrat
+     * @param $id
+     * @return mixed
+     */
+    public function activeCompte(Request $request, ObjectManager $om, $id_compte, $id)
+    {
+       $em = $this->getDoctrine()->getEntityManager();
+       $compte = $em->getRepository('App:Compte')->find($id_compte);
+       if ($compte->getActif()) {
+        $compte->setActif(false);
+       } else {
+        $compte->setActif(true);
+       }
+       $em->flush();
+       return $this->redirectToRoute('display_personne', ['id' => $id]);
+    }
 }
