@@ -3,13 +3,17 @@ body{
 }
 
 .position-help{
-  float: right;
+  margin: 0 auto;
   width: fit-content;
 }
 
 .full-width{
     width: 100%;
     height: auto;
+}
+
+.padding-top{
+  padding: 50px 0 0 0;
 }
 
 .bold{
@@ -138,7 +142,7 @@ body{
 
 #main h1{
   text-align: center;
-  margin: 20px 0 35px 0;
+  margin: 55px 0 35px 0;
   color: #365684;
 }
 
@@ -262,6 +266,7 @@ body{
 /* CSS MODALS */
 
 .modal-content{
+  height: fit-content;
   min-height: 600px;
 }
 
@@ -392,6 +397,9 @@ table td{
 }
 
 @media (max-width: 450px){
+  .modal-content{
+    min-height: 96vh;
+  }
   #main h1{
     font-size: 28px;
   }
