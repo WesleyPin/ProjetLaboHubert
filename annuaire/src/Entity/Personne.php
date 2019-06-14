@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PersonneRepository")
@@ -18,18 +17,12 @@ class Personne
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=20, nullable=false)
-     * @Assert\Regex(
-     *     pattern="/^[A-Za-zéèêë\-]+$/"
-     * )
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $firstname;
 
     /**
-     * @ORM\Column(type="string", length=20, nullable=false)
-     * @Assert\Regex(
-     *     pattern="/^[A-Za-zéèêë\-\s]+$/"
-     * )
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $lastname;
 
@@ -40,27 +33,38 @@ class Personne
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Regex("/^[A-Z][A-Za-zéèêë\-\s]+$/")
      */
     private $placebirth;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Regex("/^(0)[1-9](\d{2}){4}$/")
      */
     private $homephone;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Regex("/^(0)[1-9](\d{2}){4}$/")
      */
     private $mobilephone;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
-     * @Assert\Regex("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/")
      */
     private $mail;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $mailGeeps;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $civilite;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $img;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -288,6 +292,37 @@ class Personne
     {
         $this->compte = $compte;
     }
+
+    public function getMailGeeps()
+    {
+        return $this->mailGeeps;
+    }
+
+    public function setMailGeeps($mailGeeps)
+    {
+        $this->mailGeeps = $mailGeeps;
+    }
+
+    public function getCivilite()
+    {
+        return $this->civilite;
+    }
+
+    public function setCivilite($civilite)
+    {
+        $this->civilité = $civilite;
+    }
+
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    public function setImg($img)
+    {
+        $this->img = $img;
+    }
+
 
 
 }

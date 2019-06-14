@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91126c00-952c-4376-90d9-931d40aeb4f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Contrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Contrat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Personne.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Personne.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,23 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Personne.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="344" column="10" selection-start-line="344" selection-start-column="10" selection-end-line="344" selection-end-column="10" />
-              <folding>
-                <element signature="e#34#56#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_personne_activity.html.twig">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Contrat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state relative-caret-position="374">
+              <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -48,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
+            <state relative-caret-position="8653">
               <caret line="509" column="27" selection-start-line="509" selection-start-column="27" selection-end-line="509" selection-end-column="27" />
             </state>
           </provider>
@@ -140,6 +138,7 @@
         <option value="$PROJECT_DIR$/annuaire/public/css/annuaire.css" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/form_personne_activity.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" />
+        <option value="$PROJECT_DIR$/annuaire/src/Entity/Contrat.php" />
       </list>
     </option>
   </component>
@@ -273,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -336,6 +334,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,17 +368,18 @@
       <workItem from="1560362286542" duration="6428000" />
       <workItem from="1560419938525" duration="275000" />
       <workItem from="1560443396147" duration="4298000" />
+      <workItem from="1560496595684" duration="1765000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18579000" />
+    <option name="totallyTimeSpent" value="20344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2409396" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2442953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,13 +418,6 @@
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/header.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Personne.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/import.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -443,6 +436,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5139">
+          <caret line="364" column="10" selection-start-line="364" selection-start-column="10" selection-end-line="364" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_personne_activity.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_user.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8653">
+          <caret line="509" column="27" selection-start-line="509" selection-start-column="27" selection-end-line="509" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_contrat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
         </state>
       </provider>
     </entry>
@@ -474,48 +509,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig">
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Role.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Personne.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="98" selection-start-line="26" selection-start-column="98" selection-end-line="26" selection-end-column="98" />
+        <state relative-caret-position="17">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_contrat.html.twig">
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Contrat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="509" column="27" selection-start-line="509" selection-start-column="27" selection-end-line="509" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_user.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_personne_activity.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="48" lean-forward="true" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="344" column="10" selection-start-line="344" selection-start-column="10" selection-end-line="344" selection-end-column="10" />
-          <folding>
-            <element signature="e#34#56#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="70" column="16" selection-start-line="70" selection-start-column="16" selection-end-line="70" selection-end-column="16" />
         </state>
       </provider>
     </entry>

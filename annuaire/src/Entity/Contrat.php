@@ -68,7 +68,7 @@ class Contrat
     private $personne;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Typeofcontrat")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Typeofcontrat")
      * @ORM\JoinColumn(name="type", referencedColumnName="id")
      */
     private $type;

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 21 mars 2019 à 00:23
--- Version du serveur :  10.1.38-MariaDB
--- Version de PHP :  7.3.3
+-- Généré le :  ven. 14 juin 2019 à 10:07
+-- Version du serveur :  10.1.37-MariaDB
+-- Version de PHP :  7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -100,7 +100,6 @@ INSERT INTO `compte` (`id`, `login`, `password`, `role`, `home_directory`, `star
 CREATE TABLE `contrat` (
   `id` int(11) NOT NULL,
   `personne` int(11) DEFAULT NULL,
-  `typeof` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `funding` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `director` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -147,26 +146,29 @@ CREATE TABLE `personne` (
   `arrivaldate` datetime DEFAULT NULL,
   `departuredate` datetime DEFAULT NULL,
   `status` int(11) DEFAULT NULL,
-  `compte` int(11) DEFAULT NULL
+  `compte` int(11) DEFAULT NULL,
+  `mail_geeps` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `civilite` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `personne`
 --
 
-INSERT INTO `personne` (`id`, `firstname`, `lastname`, `birthdate`, `placebirth`, `homephone`, `mobilephone`, `mail`, `office`, `building`, `tutelle`, `ingeeps`, `arrivaldate`, `departuredate`, `status`, `compte`) VALUES
-(1, 'Aadministrateur', 'jack', NULL, 'Orsay', '0101010101', '0606060606', 'root@root.com', 1, 'LRI', '', 1, NULL, NULL, 1, 1),
-(2, 'User', 'jack', NULL, 'Orsay', '0101010101', '0606060606', 'root@root.com', 7, 'Gustave eiffel', '', 1, NULL, NULL, 1, 2),
-(5, 'Jack', 'Johnson', NULL, 'Osay', '0101010101', '0606060606', 'jack@gmail.com', 5, 'Bat 32', '', 1, NULL, NULL, 2, 4),
-(6, 'Frederique', 'Dupont', NULL, 'Palaiseau', '0101010101', '0606060606', 'fred@gmail.com', 5, 'Bat 2', '', 1, NULL, NULL, 1, 5),
-(8, 'Stephane', 'henri', NULL, 'Vitry', '0101010101', '0606060606', 'steph@gmail.com', 5, 'Bat 9', '', 1, NULL, NULL, 1, 6),
-(9, 'Valentin', 'Decarse', NULL, 'Orsay', '0101010101', '0606060606', 'val@gmail.com', 5, 'Bat 4', '', 1, NULL, NULL, 1, 7),
-(10, 'Léa', 'Jilloru', NULL, 'Gif sur Yvette', '0101010101', '0606060606', 'lea@gmail.com', 5, 'Bat 255', '', 1, NULL, NULL, 2, 8),
-(11, 'Elise', 'Reic', NULL, 'Bures', '0101010101', '0606060606', 'elise@gmail.com', 5, 'Bat 8', '', 1, NULL, NULL, 2, 9),
-(13, 'Marlone', 'Jazzy', NULL, 'Choisy', '0101010101', '0606060606', 'marlone@gmail.com', 5, 'Bat 65', '', 1, NULL, NULL, 1, 10),
-(14, 'Alexandre', 'Dupont', NULL, 'St-Cyr', '0101010101', '0606060606', 'alex@gmail.com', 5, 'Bat 20', '', 1, NULL, NULL, 1, 11),
-(15, 'Guillaume', 'Dupont', NULL, 'Orsay', '0101010101', '0606060606', 'guillaume@gmail.com', 5, 'Bat 855', '', 1, NULL, NULL, 1, 12),
-(16, 'Robert', 'Dupont', NULL, 'Gif sur Yvette', '0101010101', '0606060606', 'robert@gmail.com', 5, 'Bat 15', '', 1, NULL, NULL, 1, 13);
+INSERT INTO `personne` (`id`, `firstname`, `lastname`, `birthdate`, `placebirth`, `homephone`, `mobilephone`, `mail`, `office`, `building`, `tutelle`, `ingeeps`, `arrivaldate`, `departuredate`, `status`, `compte`, `mail_geeps`, `civilite`, `img`) VALUES
+(1, 'Aadministrateur', 'jack', NULL, 'Orsay', '0101010101', '0606060606', 'root@root.com', 1, 'LRI', '', 1, NULL, NULL, 1, 1, NULL, NULL, NULL),
+(2, 'User', 'jack', NULL, 'Orsay', '0101010101', '0606060606', 'root@root.com', 7, 'Gustave eiffel', '', 1, NULL, NULL, 1, 2, NULL, NULL, NULL),
+(5, 'Jack', 'Johnson', NULL, 'Osay', '0101010101', '0606060606', 'jack@gmail.com', 5, 'Bat 32', '', 1, NULL, NULL, 2, 4, NULL, NULL, NULL),
+(6, 'Frederique', 'Dupont', NULL, 'Palaiseau', '0101010101', '0606060606', 'fred@gmail.com', 5, 'Bat 2', '', 1, NULL, NULL, 1, 5, NULL, NULL, NULL),
+(8, 'Stephane', 'henri', NULL, 'Vitry', '0101010101', '0606060606', 'steph@gmail.com', 5, 'Bat 9', '', 1, NULL, NULL, 1, 6, NULL, NULL, NULL),
+(9, 'Valentin', 'Decarse', NULL, 'Orsay', '0101010101', '0606060606', 'val@gmail.com', 5, 'Bat 4', '', 1, NULL, NULL, 1, 7, NULL, NULL, NULL),
+(10, 'Léa', 'Jilloru', NULL, 'Gif sur Yvette', '0101010101', '0606060606', 'lea@gmail.com', 5, 'Bat 255', '', 1, NULL, NULL, 2, 8, NULL, NULL, NULL),
+(11, 'Elise', 'Reic', NULL, 'Bures', '0101010101', '0606060606', 'elise@gmail.com', 5, 'Bat 8', '', 1, NULL, NULL, 2, 9, NULL, NULL, NULL),
+(13, 'Marlone', 'Jazzy', NULL, 'Choisy', '0101010101', '0606060606', 'marlone@gmail.com', 5, 'Bat 65', '', 1, NULL, NULL, 1, 10, NULL, NULL, NULL),
+(14, 'Alexandre', 'Dupont', NULL, 'St-Cyr', '0101010101', '0606060606', 'alex@gmail.com', 5, 'Bat 20', '', 1, NULL, NULL, 1, 11, NULL, NULL, NULL),
+(15, 'Guillaume', 'Dupont', NULL, 'Orsay', '0101010101', '0606060606', 'guillaume@gmail.com', 5, 'Bat 855', '', 1, NULL, NULL, 1, 12, NULL, NULL, NULL),
+(16, 'Robert', 'Dupont', NULL, 'Gif sur Yvette', '0101010101', '0606060606', 'robert@gmail.com', 5, 'Bat 15', '', 1, NULL, NULL, 1, 13, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -283,7 +285,7 @@ ALTER TABLE `compte`
 ALTER TABLE `contrat`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `UNIQ_60349993FCEC9EF` (`personne`),
-  ADD UNIQUE KEY `UNIQ_603499938CDE5729` (`type`);
+  ADD KEY `IDX_603499938CDE5729` (`type`);
 
 --
 -- Index pour la table `groupinfo`
@@ -352,7 +354,7 @@ ALTER TABLE `compte`
 -- AUTO_INCREMENT pour la table `contrat`
 --
 ALTER TABLE `contrat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `groupinfo`
@@ -364,7 +366,7 @@ ALTER TABLE `groupinfo`
 -- AUTO_INCREMENT pour la table `personne`
 --
 ALTER TABLE `personne`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT pour la table `responsable`
@@ -388,7 +390,7 @@ ALTER TABLE `status`
 -- AUTO_INCREMENT pour la table `typeofcontrat`
 --
 ALTER TABLE `typeofcontrat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `workon`
