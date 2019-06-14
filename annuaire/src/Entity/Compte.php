@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use SXgi164MCGG3u5RKXaBGVBabmxQTVRAAVEnnKzHR26vu4rface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CompteRepository")

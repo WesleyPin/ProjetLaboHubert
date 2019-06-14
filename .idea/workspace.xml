@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91126c00-952c-4376-90d9-931d40aeb4f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Activite.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Activite.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Compte.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Compte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Contrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Contrat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Groupinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Groupinfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Personne.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Personne.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Responsable.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Responsable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Status.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Workon.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Workon.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,37 +26,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Responsable.php">
+        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Compte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Status.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="1" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Workon.php">
+        <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Activite.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -147,8 +120,6 @@
         <option value="$PROJECT_DIR$/annuaire/public/css/annuaire.css" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/form_personne_activity.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" />
-        <option value="$PROJECT_DIR$/annuaire/src/Entity/Compte.php" />
-        <option value="$PROJECT_DIR$/annuaire/src/Entity/Activite.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Contrat.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Groupinfo.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Personne.php" />
@@ -157,6 +128,8 @@
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Status.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Workon.php" />
+        <option value="$PROJECT_DIR$/annuaire/src/Entity/Compte.php" />
+        <option value="$PROJECT_DIR$/annuaire/src/Entity/Activite.php" />
       </list>
     </option>
   </component>
@@ -391,7 +364,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20607000" />
+    <option name="totallyTimeSpent" value="20831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -513,30 +486,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Activite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Personne.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="327" column="1" selection-start-line="327" selection-start-column="1" selection-end-line="327" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Compte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="194" column="1" selection-start-line="194" selection-start-column="1" selection-end-line="194" selection-end-column="1" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -554,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_contrat.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Role.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
@@ -568,17 +514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Responsable.php">
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Workon.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
-          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -589,10 +528,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Workon.php">
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Status.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Responsable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
-          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+          <caret line="57" column="1" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/form_contrat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Compte.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Entity/Activite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
         </state>
       </provider>
     </entry>
