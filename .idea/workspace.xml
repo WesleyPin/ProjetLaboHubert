@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91126c00-952c-4376-90d9-931d40aeb4f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/annuaire/public/css/annuaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/public/css/annuaire.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/display_activity.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/display_contrat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/display_contrat.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/import.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/import.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/annuaire/templates/front/manage_activities.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/templates/front/manage_activities.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annuaire/templates/front/import.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -43,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="569" column="17" selection-start-line="569" selection-start-column="17" selection-end-line="569" selection-end-column="17" />
+            <state relative-caret-position="321">
+              <caret line="559" column="30" selection-start-line="559" selection-start-column="30" selection-end-line="559" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -95,8 +85,8 @@
         <option value="$PROJECT_DIR$/annuaire/templates/front/display_compte.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/display_contrat.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig" />
-        <option value="$PROJECT_DIR$/annuaire/public/css/annuaire.css" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/import.html.twig" />
+        <option value="$PROJECT_DIR$/annuaire/public/css/annuaire.css" />
       </list>
     </option>
   </component>
@@ -331,7 +321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24252000" />
+    <option name="totallyTimeSpent" value="24916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -557,17 +547,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="569" column="17" selection-start-line="569" selection-start-column="17" selection-end-line="569" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/import.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="559" column="30" selection-start-line="559" selection-start-column="30" selection-end-line="559" selection-end-column="30" />
         </state>
       </provider>
     </entry>
