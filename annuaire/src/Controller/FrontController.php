@@ -60,8 +60,12 @@ class FrontController extends AbstractController
       foreach ($workon as $work) {
         $em->remove($work);
       }
-      $em->remove($compte);
-      $em->remove($contrat);
+      if($compte) {
+          $em->remove($compte);
+      }
+      if($contrat) {
+          $em->remove($contrat);
+      }
       $em->remove($personne);
       $em->flush();
 

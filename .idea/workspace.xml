@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91126c00-952c-4376-90d9-931d40aeb4f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/annuaire/public/css/annuaire.css" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/public/css/annuaire.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6955">
-              <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
+            <state relative-caret-position="340">
+              <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -33,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
+            <state relative-caret-position="352">
               <caret line="559" column="30" selection-start-line="559" selection-start-column="30" selection-end-line="559" selection-end-column="30" />
             </state>
           </provider>
@@ -78,7 +79,6 @@
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Compte.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Activite.php" />
         <option value="$PROJECT_DIR$/annuaire/src/Entity/Typeofcontrat.php" />
-        <option value="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/display_personne.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/index.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/manage_activities.html.twig" />
@@ -87,6 +87,7 @@
         <option value="$PROJECT_DIR$/annuaire/templates/front/display_personne_activities.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/templates/front/import.html.twig" />
         <option value="$PROJECT_DIR$/annuaire/public/css/annuaire.css" />
+        <option value="$PROJECT_DIR$/annuaire/src/Controller/FrontController.php" />
       </list>
     </option>
   </component>
@@ -317,17 +318,18 @@
       <workItem from="1560419938525" duration="275000" />
       <workItem from="1560443396147" duration="4298000" />
       <workItem from="1560496595684" duration="1765000" />
+      <workItem from="1560511519280" duration="362000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24916000" />
+    <option name="totallyTimeSpent" value="25429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2442953" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24765101" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -485,13 +487,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_activity.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_activity.html.twig" />
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/display_compte.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1445">
@@ -540,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6955">
-          <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/templates/front/import.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -556,8 +545,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/annuaire/public/css/annuaire.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
+        <state relative-caret-position="352">
           <caret line="559" column="30" selection-start-line="559" selection-start-column="30" selection-end-line="559" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/annuaire/src/Controller/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
         </state>
       </provider>
     </entry>
