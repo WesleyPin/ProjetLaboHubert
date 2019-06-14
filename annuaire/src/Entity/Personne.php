@@ -45,19 +45,19 @@ class Personne
     private $placebirth;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=10, nullable=true)
      * @Assert\Regex("/^(0)[1-9](\d{2}){4}$/")
      */
     private $homephone;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=10, nullable=true)
      * @Assert\Regex("/^(0)[1-9](\d{2}){4}$/")
      */
     private $mobilephone;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=false)
      * @Assert\Regex("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/")
      */
     private $mail;

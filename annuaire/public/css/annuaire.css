@@ -341,7 +341,7 @@ body {
     filter: opacity(.8);
 }
 
-.btn-see-user{
+.btn-see-user {
     width: 70%;
     background-image: linear-gradient(120deg, #94baef 0%, #365684 100%);
     border: none;
@@ -508,4 +508,49 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.login-user {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.picker-color {
+    width: 100%;
+    margin: 3px 0px;
+    padding: 2px 0px;
+}
+
+.select-role {
+    width: 100% !important;
+}
+
+.view-password {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    filter: brightness(0);
+    top: 5vh;
+    margin-right: 5px;
+}
+
+.input-password {
+    position: relative;
+    width: 100%;
+}
+
+.input-password input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.select-homeD {
+    width: 100% !important;
 }

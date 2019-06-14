@@ -175,9 +175,15 @@
                     </a>
                 </td>
                 <td>
-                    <a href="{{ path('delete', { 'id': user.id }) }}">
-                        <button class="btn-delete-user">Supprimer</button>
-                    </a>
+                    {% if app.user.id == user.id %}
+                        <a href="{{ path('security_logout') }}">
+                            <button class="btn-delete-user">Se déconnecter</button>
+                        </a>
+                    {% else %}
+                        <a href="{{ path('delete', { 'id': user.id }) }}">
+                            <button class="btn-delete-user">Supprimer</button>
+                        </a>
+                    {% endif %}
                 </td>
             </tr>
         </table>

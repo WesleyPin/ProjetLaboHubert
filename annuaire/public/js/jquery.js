@@ -17,7 +17,11 @@ $(document).ready(function () {
     $("#submitCo").mouseout(function () {
         $("#submitCo").css("background-color", "rgba(51, 153, 255, 1)");
     })
-    $("#menu").click(function () {
-        console.log('test');
+    $("#viewPassword").click(function () {
+        if ($("#form_password").prop('type') == 'text') {
+            $("#form_password").attr('type', 'password');
+        } else {
+            $("#form_password").attr('type', 'text');
+        }
     })
 })
