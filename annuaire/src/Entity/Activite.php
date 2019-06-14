@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use SXgi164MCGG3u5RKXaBGVBabmxQTVRAAVE5tDTs as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ActiviteRepository")
@@ -18,6 +19,9 @@ class Activite
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(
+     *     pattern="/^[A-Za-z0-9éèêë\-\s]+$/"
+     * )
      */
     private $label;
 
@@ -33,11 +37,17 @@ class Activite
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(
+     *     pattern="/^[A-Za-z0-9éèêë\-\_]+$/"
+     * )
      */
     private $typeof;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Regex(
+     *     pattern="/^[A-Za-z0-9éèêëà\!\?\-\_ç\'\s]+$/"
+     * )
      */
     private $description;
 
@@ -92,7 +102,7 @@ class Activite
         $this->color = $color;
     }
 
-     function getDescription()
+    function getDescription()
     {
         return $this->description;
     }

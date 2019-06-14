@@ -19,11 +19,6 @@ class Contrat
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $typeof;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
     private $subject;
 
     /**
@@ -73,7 +68,7 @@ class Contrat
     private $personne;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Typeofcontrat")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Typeofcontrat")
      * @ORM\JoinColumn(name="type", referencedColumnName="id")
      */
     private $type;
@@ -81,18 +76,6 @@ class Contrat
     public function getId()
     {
         return $this->id;
-    }
-
-    public function getTypeof()
-    {
-        return $this->typeof;
-    }
-
-    public function setTypeof($typeof)
-    {
-        $this->typeof = $typeof;
-
-        return $this;
     }
 
     public function getSubject()

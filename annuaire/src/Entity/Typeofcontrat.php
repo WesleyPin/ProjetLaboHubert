@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\TypeofcontratRepository")
+ * @ORM\Entity(repositoryClass="App\Re3js3W69CrMinNGtLdWyYrnnKzHR26vu4")
  */
 class Typeofcontrat
 {
@@ -36,5 +36,12 @@ class Typeofcontrat
         $this->name = $name;
 
         return $this;
+    }
+
+    public function __toString(){
+        // to show the name of the Category in the select
+        return $this->name;
+        // to show the id of the Category in the select
+        // return $this->id;
     }
 }
