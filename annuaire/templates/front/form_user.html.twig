@@ -5,55 +5,55 @@
 
 {% block body %}
 
-    <div>
-        <a class="lien-retour" href="{{ path("annuaire") }}">< Retour</a>
+<div>
+    <a class="lien-retour" href="{{ path("annuaire") }}">Retour</a>
+</div>
+
+<div class="form-modify">
+    {{ form_start(form_personne,  {'attr': {'class': 'classTest'}}) }}
+
+    {% if id != -1 %}
+        <h1>Modification</h1>
+    {% else %}
+        <h1>Ajout d'une personne</h1>
+    {% endif %}
+
+
+    <div class="input-text">
+        {{ form_row(form_personne.firstname, {'label': 'Prénom'}) }}
     </div>
-
-    <div class="form-modify">
-        {{ form_start(form_personne,  {'attr': {'class': 'classTest'}}) }}
-
-        {% if id != -1 %}
-            <h1>Modification</h1>
-        {% else %}
-            <h1>Ajout d'une personne</h1>
-        {% endif %}
-
-
-        <div class="input-text">
-            {{ form_row(form_personne.firstname, {'label': 'Prénom'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.lastname, {'label': 'Nom de famille'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.birthdate, {'label': 'Date de naissance'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.placebirth, {'label': 'Lieu de naissance'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.mail, {'label': 'Email'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.homephone, {'label': 'Tél. fixe'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.mobilephone, {'label': 'Tél. mobile'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.office, {'label': 'Bureau'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.building, {'label': 'Bâtiment'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.tutelle, {'label': 'Tutelle'}) }}
-        </div>
-        <div class="input-text">
-            {{ form_row(form_personne.ingeeps, {'label': 'Est du laboratoire'}) }}
-        </div>
-        <div class="input-text ingeeps">
-            {{ form_row(form_personne.arrivaldate, {'label': 'Date d\'arrivée'}) }}
+    <div class="input-text">
+        {{ form_row(form_personne.lastname, {'label': 'Nom de famille'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.birthdate, {'label': 'Date de naissance'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.placebirth, {'label': 'Lieu de naissance'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.mail, {'label': 'Email'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.homephone, {'label': 'Tél. fixe'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.mobilephone, {'label': 'Tél. mobile'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.office, {'label': 'Bureau'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.building, {'label': 'Bâtiment'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.tutelle, {'label': 'Tutelle'}) }}
+    </div>
+    <div class="input-text">
+        {{ form_row(form_personne.ingeeps, {'label': 'Est du laboratoire'}) }}
+    </div>
+    <div class="input-text ingeeps">
+        {{ form_row(form_personne.arrivaldate, {'label': 'Date d\'arrivée'}) }}
         </div>
         <div class="input-text ingeeps">
             {{ form_row(form_personne.departuredate, {'label': 'Date de départ'}) }}
