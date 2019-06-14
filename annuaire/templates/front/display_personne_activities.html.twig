@@ -25,7 +25,9 @@
                     </td>
                     <td>
                         <a href="{{ path('delete_personne_activity', { 'id': user.id, 'id_activite': label.id }) }}">
-                            <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
+                            <button class="button-delete" title="Supprimer" onclick="return confirm('Etes-vous sûr ?');">
+                                <img src="{{ asset('img/delete-100.png') }}" alt="Supprimer">
+                            </button>
                         </a>
                     </td>
                 </tr>

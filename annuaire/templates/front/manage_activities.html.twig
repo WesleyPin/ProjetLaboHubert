@@ -66,7 +66,7 @@
                                         <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
                                     </a>
                                     <a href="{{ path('delete_activity', { 'id': activity.id }) }}">
-                                        <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
+                                        <button class="button-delete" title="Supprimer" onclick="return confirm('Etes-vous sûr ?');"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
                                     </a>
                                 </span>
                             </td>

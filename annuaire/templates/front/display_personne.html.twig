@@ -131,7 +131,7 @@
                             <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
                         </a>
                         <a href="{{ path('delete_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
-                            <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
+                            <button class="button-delete" title="Supprimer" onclick="return confirm('Etes-vous sûr ?');"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
                         </a>
                     {% else %}
                         <a href="{{ path('form_contrat', { 'id': user.id, 'id_contrat': '-1' }) }}">
@@ -181,7 +181,7 @@
                         </a>
                     {% else %}
                         <a href="{{ path('delete', { 'id': user.id }) }}">
-                            <button class="btn-delete-user">Supprimer</button>
+                            <button class="btn-delete-user" onclick="return confirm('Etes-vous sûr ?');">Supprimer</button>
                         </a>
                     {% endif %}
                 </td>

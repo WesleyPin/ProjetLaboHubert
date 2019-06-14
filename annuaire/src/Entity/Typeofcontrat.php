@@ -5,7 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Re3js3W69CrMinNGtLdWyYrnnKzHR26vu4")
+ * @ORM\Entity(repositoryClass="App\Repository\TypeofcontratRepository")
  */
 class Typeofcontrat
 {

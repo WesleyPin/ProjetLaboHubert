@@ -4,23 +4,24 @@
 {% endblock %}
 
 {% block body %}
-    <h2>Import CSV file into Mysql using PHP</h2>
-
-    <div id="response" class=""></div>
-    <div class="outer-scontainer">
-        <div class="row">
-            <form class="form-horizontal" action="{{ path('import-csv') }}" method="post" name="frmCSVImport"
-                  id="frmCSVImport" enctype="multipart/form-data">
-                <div class="input-row">
-                    <label class="col-md-4 control-label">Choose CSV File</label> <input type="file" name="file"
-                                                                                         id="file" accept=".csv">
-                    <button type="submit" id="submit" name="import" class="btn-submit">Import</button>
-                    <br/>
-                </div>
-
-            </form>
-
+    <div class="form-modify">
+        <h1>Importer des données depuis un fichier CSV dans la base de données</h1>
+        <div id="response" class=""></div>
+        <div class="outer-scontainer">
+            <div class="row">
+                <form class="form-horizontal" action="{{ path('import-csv') }}" method="post" name="frmCSVImport"
+                      id="frmCSVImport" enctype="multipart/form-data">
+                    <div class="input-row">
+                        <label class="col-md-4 control-label">Choisir un fichier CSV</label>
+                        <br>
+                        <br>
+                        <input type="file" name="file" id="file" accept=".csv">
+                        <br>
+                        <br>
+                        <button type="submit" id="submit" name="import" class="btn-submit">Importer</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-
 {% endblock %}

@@ -102,7 +102,7 @@
                 </td>
                 <td>
                     <a href="{{ path('delete_contrat', { 'id_contrat': contrat.id, 'id': user.id }) }}">
-                        <button class="btn-delete-user">Supprimer</button>
+                        <button class="btn-delete-user" onclick="return confirm('Etes-vous sûr ?');">Supprimer</button>
                     </a>
                 </td>
             </tr>

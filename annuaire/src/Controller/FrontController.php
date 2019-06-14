@@ -55,9 +55,13 @@ class FrontController extends AbstractController
       $em = $this->getDoctrine()->getEntityManager();
       $personne = $em->getRepository('App:Personne')->find($id);
       $workon = $em->getRepository('App:Workon')->findBy(array('personne' => $id));
+      $compte = $em->getRepository('App:Compte')->findOneBy(array('id' => $personne->getCompte()));
+      $contrat = $em->getRepository('App:Contrat')->findOneBy(array('personne' => $id));
       foreach ($workon as $work) {
         $em->remove($work);
       }
+      $em->remove($compte);
+      $em->remove($contrat);
       $em->remove($personne);
       $em->flush();
 
