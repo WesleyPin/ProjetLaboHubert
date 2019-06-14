@@ -444,7 +444,12 @@ class FrontController extends AbstractController
         $form_compte = $this->createFormBuilder($compte)
             ->add('login')
             ->add('password')
-            ->add('home_directory')
+            ->add('home_directory', ChoiceType::class, [
+                'choices'  => [
+                    'Permanent' => 'Permanent',
+                    'Non permanent' => 'Permanent'
+                ],
+            ])
             ->add('role')
             ->add('startdate', DateType::class, [
                 'years' => range(date('Y') -10, date('Y') -15)

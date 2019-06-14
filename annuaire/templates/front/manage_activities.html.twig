@@ -16,7 +16,7 @@
     </script>
 
     <div>
-        <a class="lien-retour" href="{{ path("annuaire") }}">< Retour</a>
+        <a class="lien-retour" href="{{ path("annuaire") }}">Accueil</a>
     </div>
 
     <div class="tab-block">
@@ -27,54 +27,51 @@
         <div class="annuaire-container">
             <table class="table-annuaire cell-border" id="annuaire">
                 <thead>
-                <tr>
-                    <th>
-                        Activité
-                    </th>
-                    <th>
-                        Type
-                    </th>
-                    <th>
-                        Couleur
-                    </th>
-                    <th>
-                        Description
-                    </th>
-                    <th>
-                        Actions
-                    </th>
-                </tr>
+                    <tr>
+                        <th>
+                            Activité
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Couleur
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Actions
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
-                {% for activity in activities %}
-                    <tr>
-                        <td>
-                            {{ activity.label }}
-                        </td>
-                        <td>
-                            {{ activity.typeof }}
-                        </td>
-                        <td>
-                            {{ activity.color }}
-                        </td>
-                        <td>
-                            {{ activity.description }}
-                        </td>
-                        <td>
-                                    <span class="do-not-wrap">
-                                        <a href="{{ path('display_activity', { 'id': activity.id }) }}">
-                                            <button class="button-view" title="Voir"><img src="{{ asset('img/view-100.png') }}" alt="Voir"></button>
-                                        </a>
-                                        <a href="{{ path('form_activity', { 'id': activity.id }) }}">
-                                            <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
-                                        </a>
-                                        <a href="{{ path('delete_activity', { 'id': activity.id }) }}">
-                                            <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
-                                        </a>
-                                    </span>
-                        </td>
-                    </tr>
-                {% endfor %}
+                    {% for activity in activities %}
+                        <tr>
+                            <td>
+                                {{ activity.label }}
+                            </td>
+                            <td>
+                                {{ activity.typeof }}
+                            </td>
+                            <td>
+                                {{ activity.color }}
+                            </td>
+                            <td>
+                                {{ activity.description }}
+                            </td>
+                            <td>
+                                <span class="do-not-wrap">
+                                    <a href="{{ path('form_activity', { 'id': activity.id }) }}">
+                                        <button class="button-edit" title="Modifier"><img src="{{ asset('img/edit-100.png') }}" alt="Modifier"></button>
+                                    </a>
+                                    <a href="{{ path('delete_activity', { 'id': activity.id }) }}">
+                                        <button class="button-delete" title="Supprimer"><img src="{{ asset('img/delete-100.png') }}" alt="Supprimer"></button>
+                                    </a>
+                                </span>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
                 <tfoot></tfoot>
             </table>
