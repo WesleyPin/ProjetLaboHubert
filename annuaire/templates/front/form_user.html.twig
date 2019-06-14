@@ -5,19 +5,18 @@
 
 {% block body %}
 
-    <div>
-        <a class="lien-retour" href="{{ path("annuaire") }}">< Retour</a>
-    </div>
+<div>
+    <a class="lien-retour" href="{{ path("annuaire") }}">Retour</a>
+</div>
 
-    <div class="form-modify">
-        {{ form_start(form_personne,  {'attr': {'class': 'classTest'}}) }}
+<div class="form-modify">
+    {{ form_start(form_personne,  {'attr': {'class': 'classTest'}}) }}
 
-        {% if id != -1 %}
-            <h1>Modification</h1>
-        {% else %}
-            <h1>Ajout d'une personne</h1>
-        {% endif %}
-
+    {% if id != -1 %}
+        <h1>Modification</h1>
+    {% else %}
+        <h1>Ajout d'une personne</h1>
+    {% endif %}
 
         <div class="input-text">
             {{ form_row(form_personne.firstname, {'label': 'Prénom'}) }}
@@ -26,7 +25,7 @@
             {{ form_row(form_personne.lastname, {'label': 'Nom de famille'}) }}
         </div>
         <div class="input-text">
-            {{ form_row(form_personne.civilite, {'label': 'Civilité'}) }}
+            {{ form_row(form_personne.civilite, {'label': 'Civilité', 'attr' : { 'class': 'select-role'}}) }}
         </div>
         <div class="input-text">
             {{ form_row(form_personne.birthdate, {'label': 'Date de naissance'}) }}
