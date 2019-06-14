@@ -111,6 +111,14 @@ class FrontController extends AbstractController
             ->add('departuredate', DateType::class, [
                 'years' => range(date('Y') +20, date('Y')),
             ])
+            ->add('mail_geeps')
+            ->add('civilite', ChoiceType::class, [
+                'choices'  => [
+                    'Monsieur' => 'Monsieur',
+                    'Madame' => 'Madame'
+                ],
+            ])
+            //->add('img')
             ->getForm();
 
         $form_personne->handleRequest($request);

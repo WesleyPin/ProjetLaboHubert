@@ -26,6 +26,9 @@
             {{ form_row(form_personne.lastname, {'label': 'Nom de famille'}) }}
         </div>
         <div class="input-text">
+            {{ form_row(form_personne.civilite, {'label': 'Civilité'}) }}
+        </div>
+        <div class="input-text">
             {{ form_row(form_personne.birthdate, {'label': 'Date de naissance'}) }}
         </div>
         <div class="input-text">
@@ -33,6 +36,9 @@
         </div>
         <div class="input-text">
             {{ form_row(form_personne.mail, {'label': 'Email'}) }}
+        </div>
+        <div class="input-text">
+            {{ form_row(form_personne.mail_geeps, {'label': 'E-Mail GeePs'}) }}
         </div>
         <div class="input-text">
             {{ form_row(form_personne.homephone, {'label': 'Tél. fixe'}) }}
